@@ -14,11 +14,12 @@
 @media only screen and (max-width: 768px) {
  body {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
     flex-direction: column; /* Agregar esta línea */
+    width: 95%;
   }
 
   .containerbtn {
@@ -39,6 +40,12 @@
     font-size: 25px !important;
     padding: 8px 16px !important;
   }
+
+  .crossContainer {
+    max-height:100px; 
+  }
+
+
 }
 
 /*------END PHONE PART----------*/
@@ -151,7 +158,7 @@
 
 
 /*content web*/
-.cross-container {
+.crossContainer {
   display: flex;
   justify-content: center;
   align-items: center;

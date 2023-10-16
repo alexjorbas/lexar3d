@@ -15,6 +15,7 @@
  body {
     overflow-x: hidden;
     overflow-y: auto;
+    width: 95%;
   }
 
   .containerbtn {
@@ -35,6 +36,31 @@
   .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
+  }
+
+
+
+.gallery {
+    flex-direction: column;
+  }
+
+  .linky {
+    margin: 10px 0;
+  }
+
+.Gtext {
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  .textoSolo button {
+    width: 100%;
+    max-width: 300px;
+    height: 80px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
   }
 
 }
@@ -184,6 +210,7 @@
 
 
 .textoSolo button {
+  max-width: 570px;
   width: 570px;
   height: 120px;
   border-radius: 40px;
@@ -196,6 +223,7 @@
   letter-spacing: 1px;
   position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(0,0,0, 1);
+  zoom: reset;
 }
 
 .textoSolo button:hover {
