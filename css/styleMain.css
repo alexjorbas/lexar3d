@@ -44,24 +44,15 @@
     flex-direction: column;
   }
 
-  .linky {
-    margin: 10px 0;
-  }
+
 
 .Gtext {
-    grid-template-columns: 1fr;
     flex-wrap: wrap;
-  justify-content: center;
+    justify-content: center;
+    scale: 55%;
+
   }
 
-  .textoSolo button {
-    width: 100%;
-    max-width: 300px;
-    height: 80px;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-    margin: 10px 0;
-  }
 
 }
 

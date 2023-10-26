@@ -40,7 +40,41 @@
     padding: 8px 16px !important;
   }
 
+  .container {
+    scale: 60%;
+    margin: 10px auto;
+  }
+
+  .player {
+    margin-top: -200px;
+  }
+
+  .moreInfo{
+    max-width: 370px;
+    top: -10%;
+   }
+
+  .nearImage {
+    scale: 160%;
+  }
+
+
+  .imagePrograms{
+  scale: 30%;
+  margin-top: -20%;
+  }
+
+
+
+  .textPrograms{
+   scale: 30%;
+   margin-top: -35%;
+  }
+
+
 }
+
+/*------END PHONE PART----------*/
 
 
 /* distribució pag */
@@ -363,7 +397,8 @@ img {
 .imagePrograms{
   display: flex;
   flex-direction: row;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .programs{

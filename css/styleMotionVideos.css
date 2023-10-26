@@ -40,6 +40,21 @@
     font-size: 25px !important;
     padding: 8px 16px !important;
   }
+
+ .contenido {
+    scale: 40%;
+   
+  }
+
+  .videoSol {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+
+
+
+
 }
 
 /*------END PHONE PART----------*/
@@ -152,6 +167,11 @@
 
 /*CONTENIDO PAG*/
 
+
+.contenido {
+  padding: 20px;
+}
+
 .videoGrp{
  border-radius: 10px;
  display: flex;
@@ -210,6 +230,8 @@
 .imagePrograms{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 10vh  auto;
   z-index: 16;
 

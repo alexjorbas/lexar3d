@@ -40,7 +40,39 @@
     padding: 8px 16px !important;
   }
 
+  .container {
+    scale: 60%;
+    margin: 10px auto;
+  }
+
+  .player {
+    margin-top: -200px;
+  }
+
+  .moreInfo{
+    max-width: 370px;
+    top: -10%;
+   }
+
+  .nearImage {
+    scale: 160%;
+  }
+
+
+  .imagePrograms{
+  scale: 30%;
+  margin-top: -20%;
+  }
+
+  .textPrograms{
+   scale: 30%;
+   margin-top: -35%;
+  }
+
+
 }
+
+/*------END PHONE PART----------*/
 
 
 /* distribució pag */
@@ -182,6 +214,7 @@ input[type=radio] {
   cursor: pointer;
 }
 
+
 .container {
   width: 100%;
   max-width: 800px;
@@ -210,6 +243,7 @@ img {
   border-radius: 10px;
   object-fit: cover;
 }
+
 
 
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
@@ -363,6 +397,8 @@ img {
 .imagePrograms{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
 }
 
