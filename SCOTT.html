@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width-device-widtj, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
+<script>
+    $('input').on('change', function() {
+      $('body').toggleClass('blue');
+    });
+
+</script>
+<link rel="stylesheet" href="css/styleScott.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<title>Portfolio Alex Jorba</title>
+</head>
+<body>
+    <div class="containerbtn">
+      <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
+      <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
+      <img src="imgs/MYLOGO.png" class="imatge" />
+      <a href="ABOUT.html" class="btn btn-derecha">ABOUT<span></span></a>
+      <a href="CONTACT.html" class="btn btn-derecha">CONTACT<span></span></a>
+    </div> 
+
+<a href="mainWorks.html">
+  <div class="buttonBack">
+    <button style="color: #007FFF; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); border: none" >&#10531;</button>
+  </div>
+</a>
+
+<div class="container">
+    <input type="radio" name="slider" id="item-1" checked>
+    <input type="radio" name="slider" id="item-2">
+    <input type="radio" name="slider" id="item-3">
+    <input type="radio" name="slider" id="item-4">
+  <div class="cards">
+    <label class="card" for="item-1" id="song-1">
+       <img src="imgs/SCOTT/MARMOSET_RENDER_reduced_002.png"  alt="Scott1">
+    </label>
+    <label class="card" for="item-2" id="song-2">
+     <img src="imgs/SCOTT/MARMOSET_RENDER_reduced_001.png"  alt="Scott2">
+    </label>
+    <label class="card" for="item-3" id="song-3">
+      <img src="imgs/SCOTT/MARMOSET_RENDER_reduced_003.png"  alt="Scott3">
+    </label>
+     
+  </div>
+  <div class="player">
+    <div class="upper-part">
+      <div class="play-icon">
+        <svg width="20" height="20" fill="#2992dc" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" class="feather feather-play" viewBox="0 0 24 24">
+          <defs>
+        <pattern id="Pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+          <Line x1="0" y1="0" x2="25" y2="0" stroke="gray" stroke-width="1"></Line>
+          <Line x1="0" y1="0" x2="0" y2="25" stroke="gray" stroke-width="1"></Line>
+        </pattern>
+      </defs>
+      <rect id="gridContainer" width="500" height="500" fill="url(#Pattern)" />
+      <path id="path" stroke="black" fill="none" stroke-width="2" d="" />
+      <g id="guideContainer" class="guideContainer">
+        <path id="helperPath" stroke-dasharray="2 5" stroke="brown" fill="none" stroke-width="2" d="" />
+      </g>
+
+      </div>
+      <div class="info-area" id="test">
+        <label class="song-info" id="song-info-1">
+          <div class="title">SCOTT SPARK 2020</div>
+          <div class="sub-line">
+            <div class="subtitle">Side Centered View</div>
+            <div class="time">IP67: water and dust proof</div>
+          </div>
+        </label>
+        <label class="song-info" id="song-info-2">
+          <div class="title">From Ultimate Ears (Logitech)</div>
+          <div class="sub-line">
+            <div class="subtitle">Side View</div>
+            <div class="time">Battery Time: 13h</div>
+          </div>
+        </label>
+        <label class="song-info" id="song-info-3">
+          <div class="title">360º Sound</div>
+          <div class="sub-line">
+            <div class="subtitle">Front View</div>
+            <div class="time">With Outdoor Mode (EQ)</div>
+          </div>
+        </label>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+
+
+
+
+<div class="moreInfo Separation">
+  <div class="textoSolo">
+    <button>ANIMATION</button>
+</div>
+
+<div class="videoGrp" >
+    <iframe  class="animacio" src="https://www.youtube.com/embed/cKp7AgGj2PI" title="SCOTT SPARK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+  <div class="textoSolo">
+    <button>OVERVIEW</button>
+  </div>
+  <img src="imgs/SCOTT/RENDER_SCOTT_01.jpg" class="nearImage" alt="maya render">
+    <img src="imgs/SCOTT/RENDER_SCOTT_substance_01.jpg" class="nearImage" alt="substance Render">
+    <img src="imgs/SCOTT/RENDER_SCOTT_substance_02.jpg" class="nearImage" alt="substance Render">
+  
+  <div class="textoSolo">
+    <button>RIGGING</button>
+  </div>
+  <div class="videoGrp" >
+    <iframe  class="animacio" src="https://www.youtube.com/embed/gbC_62oGeAQ" title="SCOTT RIG in Maya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  
+  <div class="textoSolo">
+    <button>REAL PICS</button>
+  </div>
+    <img src="imgs/SCOTT/REAL_01.jpg" class="nearImage" alt="">
+    <img src="imgs/SCOTT/REAL_02.jpg" class="nearImage" alt="">
+    <img src="imgs/SCOTT/REAL_03.jpg" class="nearImage" alt="">
+  <div class="textoSolo">
+    <button>Wireframe</button>
+  </div>
+  <img src="imgs/SCOTT/Wire_01.jpg" class="nearImage" alt="">
+    <img src="imgs/SCOTT/Wire_02.jpg" class="nearImage" alt="">
+  <div class="textoSolo">
+    <button>AO SHADING</button>
+  </div>
+  <img src="imgs/SCOTT/AO_01.jpg" class="nearImage" alt="">
+    <img src="imgs/SCOTT/AO_02.jpg" class="nearImage" alt="">
+  <div class="textoSolo">
+    <button>UV TEXTURE</button>
+  </div>
+  <img src="imgs/SCOTT/UV_01.jpg" class="nearImage" alt="">
+    <img src="imgs/SCOTT/UV_02.jpg" class="nearImage" alt="">
+
+
+
+  <div class="textoSolo">
+    <button>PROGRAMS</button>
+  </div>
+  <div class="imagePrograms">
+  <img src="imgs/maya.png" class="programs">
+  <img src="imgs/substance.jpg" class="programs">
+  <img src="imgs/marmoset.png" class="programs">
+</div>
+  <div class="textPrograms">
+      <h3 class="animate-charcter">MODELED</h3>
+      <h3 class="animate-charcter">TEXTURED</h3>
+      <h3 class="animate-charcter">RENDERED</h3>
+    </div>
+</div>
+
+
+
+<div class="fons">
+  <div class="stars-01"></div>
+  <div class="stars-02"></div>
+  <div class="stars-03"></div>
+  <div class="stars-04"></div>
+  <div class="stars-05"></div>
+</div>
+
+
+
+</body>
+</html>

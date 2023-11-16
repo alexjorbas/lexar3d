@@ -22,15 +22,20 @@
 
 
 <div class="gallery" >
-  <a href="" class="linky" >
-    <img src="imgs/OtherRandom/Metro_Reduced.png" class="Workies">
-  </a>
-  <a href="" class="linky">
-    <img src="imgs/OtherRandom/simpson.png" class="Workies">
-  </a>
-  <a href="" class="linky">
-    <img src="imgs/OtherRandom/Torrance2.png" class="Workies">
-  </a>
+  <a href="imgs/OtherRandom/Metro_Reduced.png" class="linky" onclick="openImage(event)">
+  <img src="imgs/OtherRandom/Metro_Reduced.png" class="Workies">
+</a>
+<a href="imgs/OtherRandom/simpson.png" class="linky" onclick="openImage(event)">
+  <img src="imgs/OtherRandom/simpson.png" class="Workies">
+</a>
+<a href="imgs/OtherRandom/Torrance2.png" class="linky" onclick="openImage(event)">
+  <img src="imgs/OtherRandom/Torrance2.png" class="Workies">
+</a>
+
+<div id="overlay" onclick="closeImage()">
+  <img id="overlayImage" src="">
+</div>
+  
 </div>
 
 <div class="Gtext">
@@ -61,6 +66,20 @@
 </div>
 
 
+<script>
+ function openImage(event) {
+  event.preventDefault();
+  var imageSrc = event.currentTarget.href;
+  var overlay = document.getElementById('overlay');
+  var overlayImage = document.getElementById('overlayImage');
+  overlayImage.src = imageSrc;
+  overlay.style.display = 'flex';
+}
 
+function closeImage() {
+  var overlay = document.getElementById('overlay');
+  overlay.style.display = 'none';
+}
+</script>
 </body>
 </html>

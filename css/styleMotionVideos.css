@@ -17,6 +17,7 @@
     overflow-y: auto;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     align-content: space-between;
     flex-direction: column; /* Agregar esta línea */
     width: 95%;
@@ -41,15 +42,45 @@
     padding: 8px 16px !important;
   }
 
- .contenido {
-    scale: 40%;
-   
+ .Gtext{
+    flex-direction:column;
+    max-width: 100px;
+ 
   }
 
-  .videoSol {
-    width: 50%;
-    margin-bottom: 10px;
+  .textoSolo button {
+  scale: 30%;
+  right: 375px;
+
   }
+
+  .textoSolo1 button {
+  scale: 30%;
+  }
+
+
+  .videoSol {
+    width:275px;
+
+  }
+
+.contenido{
+  max-width: 300px;
+}
+
+.videoGrp{
+  flex-direction: column;  
+}
+
+.imagePrograms{
+  scale: 20%;
+  }
+
+  .textPrograms{
+   scale: 30%;
+   margin-top: -55%;
+  }
+
 
 
 
@@ -170,6 +201,7 @@
 
 .contenido {
   padding: 20px;
+  z-index: 16;
 }
 
 .videoGrp{
@@ -193,6 +225,7 @@
   z-index: 16;
   margin: 20px auto;
   margin-bottom: 20vh;
+  flex-wrap: wrap;
 }
 
 .Gtext1 {
@@ -200,6 +233,7 @@
   justify-content:center;
   z-index: 16;
   margin: 20px auto;
+  flex-wrap: wrap;
 }
 
 
@@ -227,12 +261,35 @@
   letter-spacing: 5px;
 }
 
+.textoSolo1 button {
+  width: 570px;
+  height: 120px;
+  border-radius: 40px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #FFF;
+  background-color: rgba(20,20,20,1);
+  transition: all 0.5s;
+  margin: auto 15vh;
+  letter-spacing: 1px;
+  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  border: 3px solid rgba(0,0,0, 1);
+}
+
+.textoSolo1 button:hover {
+  background-color: #000228;
+  background-color: rgba(255,255,255, 1);
+  border: 3px solid rgba(255, 255 ,255, 1);
+  color: #000;
+  letter-spacing: 5px;
+}
+
 .imagePrograms{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 10vh  auto;
+  margin: 5vh  auto;
   z-index: 16;
 
 }
@@ -249,7 +306,7 @@
 .textPrograms{
   display: flex;
   flex-direction: row;
-  margin-bottom: 5vh;
+  margin-bottom: 30vh;
   justify-content: center;
 }
 

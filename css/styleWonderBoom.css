@@ -7,6 +7,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
 }
 
 
@@ -182,22 +183,19 @@
 /*boto back*/
 .buttonBack{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  /* height: 60px; */
-  margin: 10px;
+  left: 10%;
+  position: absolute;
   position: fixed;
-  rotate: -45deg;
   transition: all 0.5s;
   z-index: 20;
+  scale: 250%;
+  
 }
 
 .buttonBack:hover{
   transform: rotate(-45deg);
   stroke: #FFF;
 }
-
 
 /*galleria d'imatges*/
 

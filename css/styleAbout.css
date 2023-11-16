@@ -9,6 +9,12 @@
   overflow-y: scroll;
 }
 
+
+@font-face {
+    font-family: Goldman;
+    src: url("../fonts/Goldman-Regular.ttf");
+}
+
 /* mobil */
 
 @media only screen and (max-width: 768px) {
@@ -199,6 +205,14 @@
   text-align: center; 
 }
 
+.centered {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  z-index: 16;
+}
  
 
 
