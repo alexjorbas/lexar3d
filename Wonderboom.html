@@ -7,7 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+  
     $('input').on('change', function() {
       $('body').toggleClass('blue');
     });
@@ -18,6 +19,7 @@
 <title>Portfolio Alex Jorba</title>
 </head>
 <body>
+  <div class="loader"></div>
     <div class="containerbtn">
       <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
       <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
@@ -125,7 +127,11 @@
   <div class="stars-05"></div>
 </div>
 
-
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});
+</script>
 
 </body>
 </html>

@@ -147,11 +147,11 @@
 
 /*galleria d'imatges*/
 .gallery {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+ display: flex;
+  justify-content: center;
+  align-items: center;
   width: 95%;
-  margin: 50px auto; /* Agregado margen superior e inferior */
+  margin: 50px auto;
   cursor: pointer;
   z-index: 16;
 }
@@ -160,18 +160,20 @@
   width: 100%;
   height: auto;
   border-radius: 40px;
-  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
+  transition: all 0.5s;
 }
 
-.Workies:hover{
-  transform: scale(1.1); /* Agrandamos la imagen al 120% con la propiedad scale */
+.Workies:hover {
+  transform: scale(1.1);
 }
 
-.linky{
+.linky {
   flex: 1;
   margin: 0 20px;
   border: 0;
 }
+
+
 
 #overlay {
   position: fixed;
@@ -186,11 +188,11 @@
   z-index: 9999;
 }
 
-#overlayImage {
+img[id^="overlayImage"] {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-}
+} 
 
 .Gtext {
   display: flex;

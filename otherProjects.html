@@ -21,40 +21,59 @@
     </div> 
 
 
-<div class="gallery" >
-  <a href="imgs/OtherRandom/Metro_Reduced.png" class="linky" onclick="openImage(event)">
-  <img src="imgs/OtherRandom/Metro_Reduced.png" class="Workies">
-</a>
-<a href="imgs/OtherRandom/simpson.png" class="linky" onclick="openImage(event)">
-  <img src="imgs/OtherRandom/simpson.png" class="Workies">
-</a>
-<a href="imgs/OtherRandom/Torrance2.png" class="linky" onclick="openImage(event)">
-  <img src="imgs/OtherRandom/Torrance2.png" class="Workies">
-</a>
-
-<div id="overlay" onclick="closeImage()">
-  <img id="overlayImage" src="">
-</div>
-  
-</div>
-
-<div class="Gtext">
-  <div class="textoSolo">
-    <button>Barcelona train line</button>
+<div class="gallery">
+    <a href="imgs/OtherRandom/Metro_Reduced.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/Metro_Reduced.png" class="Workies">
+    </a>
+    <a href="imgs/OtherRandom/simpson.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/simpson.png" class="Workies">
+    </a>
+    <a href="imgs/OtherRandom/Torrance2.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/Torrance2.png" class="Workies">
+    </a>
   </div>
-  <div class="textoSolo">
-    <button>Simpson 3dsMax Test</button>
+
+  <div class="Gtext">
+    <div class="textoSolo">
+      <button>Barcelona train line</button>
+    </div>
+    <div class="textoSolo">
+      <button>Simpson 3dsMax Test</button>
+    </div>
+    <div class="textoSolo">
+      <button>Sphere Torrance</button>
+    </div>
   </div>
-  <div class="textoSolo">
-    <button>Sphere Torrance</button>
+
+  <div class="espacioWorks"></div>
+
+  <div class="gallery">
+    <a href="imgs/OtherRandom/null.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/null.png" class="Workies">
+    </a>
+    <a href="imgs/OtherRandom/shark_ZB.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/shark_ZB.png" class="Workies">
+    </a>
+    <a href="imgs/OtherRandom/null.png" class="linky" onclick="openImage(event)">
+      <img src="imgs/OtherRandom/null.png" class="Workies">
+    </a>
   </div>
-</div>
 
-<div class="espacioWorks">
-  
-</div>
+  <div class="Gtext">
+    <div class="textoSolo">
+      <button>null</button>
+    </div>
+    <div class="textoSolo">
+      <button>SharkHead Zbrush</button>
+    </div>
+    <div class="textoSolo">
+      <button>null</button>
+    </div>
+  </div>
 
-
+  <div id="overlay" onclick="closeImage()">
+    <img id="overlayImage" src="">
+  </div>
 
 
 <div class="fons">
@@ -67,19 +86,19 @@
 
 
 <script>
- function openImage(event) {
-  event.preventDefault();
-  var imageSrc = event.currentTarget.href;
-  var overlay = document.getElementById('overlay');
-  var overlayImage = document.getElementById('overlayImage');
-  overlayImage.src = imageSrc;
-  overlay.style.display = 'flex';
-}
+    function openImage(event) {
+      event.preventDefault();
+      var imageSrc = event.currentTarget.href;
+      var overlay = document.getElementById('overlay');
+      var overlayImage = document.getElementById('overlayImage');
+      overlayImage.src = imageSrc;
+      overlay.style.display = 'flex';
+    }
 
-function closeImage() {
-  var overlay = document.getElementById('overlay');
-  overlay.style.display = 'none';
-}
-</script>
+    function closeImage() {
+      var overlay = document.getElementById('overlay');
+      overlay.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
