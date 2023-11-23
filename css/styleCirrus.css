@@ -10,16 +10,11 @@
   align-items: center;
 }
 
-.loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url('imgs/LoadingGif.gif') 50% 50% no-repeat rgb(249,249,249);
-    opacity: .8;
+@font-face {
+    font-family: Goldman;
+    src: url("../fonts/Goldman-Regular.ttf");
 }
+
 
 
 /* mobil */
@@ -29,7 +24,10 @@
     overflow-x: hidden;
     overflow-y: auto;
     width: 95%;
+
   }
+
+
 
   .containerbtn {
     flex-wrap: wrap;
@@ -63,6 +61,7 @@
   .moreInfo{
     max-width: 370px;
     top: -10%;
+
    }
 
   .nearImage {
@@ -80,6 +79,11 @@
    margin-top: -35%;
   }
 
+  .animacio{
+   max-height: 45%;
+   border-radius: 80px;
+   width: 300px;
+  }
 
 }
 
@@ -207,6 +211,7 @@
   stroke: #FFF;
 }
 
+
 /*galleria d'imatges*/
 
 input[type=radio] {
@@ -221,7 +226,6 @@ input[type=radio] {
   transition: transform .4s ease;
   cursor: pointer;
 }
-
 
 .container {
   width: 100%;
@@ -251,7 +255,6 @@ img {
   border-radius: 10px;
   object-fit: cover;
 }
-
 
 
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
@@ -358,6 +361,26 @@ img {
 
 /*mes Info*/
 
+.videoGrp{
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ z-index: 16;
+ height: 562px;
+ width: 100%;
+ position: relative;
+ margin-bottom: 100px;
+}
+
+
+.animacio{
+  border-radius: 35px;
+  width: 50%;
+  height: 95%;
+}
+
+
 .moreInfo{
   position: absolute;
   margin: 110vh auto;
@@ -366,7 +389,6 @@ img {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
 .textoSolo button {
@@ -407,7 +429,6 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .programs{
@@ -453,6 +474,10 @@ img {
   to {
     background-position: 200% center;
   }
+}
+
+.Separation{
+  top: 30vh;
 }
 
 
