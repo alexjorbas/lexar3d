@@ -44,14 +44,12 @@
     flex-direction: column;
   }
 
-
-
-.Gtext {
-    flex-wrap: wrap;
-    justify-content: center;
-    scale: 55%;
-
+.gallery-item {
+    width: 100%;
+    margin: 0 0 30px 0;
   }
+
+
 
 
 }
@@ -163,43 +161,27 @@
 
 /*galleria d'imatges*/
 .gallery {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center; 
-  width: 95%;
   margin: 50px auto; /* Agregado margen superior e inferior */
   cursor: pointer;
   z-index: 16;
+  margin: 0 200px;
 }
 
-.Workies {
+.gallery-item {
   width: 100%;
-  height: auto;
-  border-radius: 40px;
-  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
+  max-width: 570px;
+  margin: 0 30px; /* Ajusta el valor del margen según tus preferencias */
+  text-align: center;
+  margin-top: 100px;
 }
 
-.Workies:hover{
-  transform: scale(1.1); /* Agrandamos la imagen al 120% con la propiedad scale */
+.gallery-item .textoSolo {
+  margin-top: 10px;
 }
-
-.linky{
-  flex: 1;
-  margin: 0 20px;
-  border: 0;
-}
-
-.Gtext {
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
-  max-width: 85%;
-  margin: 20px auto;
-  z-index: 16;
-  zoom: 1;
-}
-
 
 .textoSolo button {
   max-width: 570px;
@@ -212,7 +194,6 @@
   color: #FFF;
   background-color: rgba(20,20,20,1);
   transition: all 0.5s;
-  margin: auto 4px;
   letter-spacing: 1px;
   position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(0,0,0, 1);
@@ -228,9 +209,22 @@
 }
 
 
-.espacioWorks{
-  margin: 80px auto;
+.Workies {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
 }
+
+.Workies:hover{
+  transform: scale(1.1); /* Agrandamos la imagen al 120% con la propiedad scale */
+}
+
+.linky{
+  flex: 1;
+  border: 0;
+}
+
 
 
 

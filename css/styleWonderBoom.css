@@ -309,6 +309,8 @@ img {
   color: #989898;
   font-size: 20px;
   line-height: 24px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
 
@@ -323,6 +325,8 @@ img {
   font-size: 14px;
   line-height: 12px;
   color: #989898;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
 .time {
