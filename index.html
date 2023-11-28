@@ -20,23 +20,37 @@
       <a href="CONTACT.html" class="btn btn-derecha">CONTACT<span></span></a>
     </div> 
 
-    <div class="Gtext">
+<div class="Gtext">
   <div class="textoSolo">
-    <button>UPCOMING PROJECT</button>
+    <button id="upcomingButton">UPCOMING PROJECT</button>
   </div>
 </div>
 
- <div class="containerSlider">
+<div class="containerSlider">
   <div class="circuloUFOContainer">
     <img src="imgs/welcometext.gif" class="imagenIzquierda">
-    <div class="blured">
-      <div class="circuloUFO">
-        <img src="imgs/index_upcoming.png">
-      </div>
+    <div class="circuloUFO">
+      <img src="imgs/index_upcoming.png" class="circuloUFOImage">
     </div>
   </div>
 </div>
 
+
+<script>
+    // Coloca aquí el código JavaScript
+    document.addEventListener('DOMContentLoaded', () => {
+      const upcomingButton = document.getElementById('upcomingButton');
+      const circuloUFOImage = document.querySelector('.circuloUFOImage');
+
+      upcomingButton.addEventListener('mouseover', () => {
+        circuloUFOImage.style.filter = 'none';
+      });
+
+      upcomingButton.addEventListener('mouseout', () => {
+        circuloUFOImage.style.filter = 'blur(20px)';
+      });
+    });
+  </script>
     
 
 

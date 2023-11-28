@@ -7,6 +7,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
   
 }
 
@@ -17,7 +18,6 @@
     overflow-x: hidden;
     overflow-y: auto;
     width: 95%;
-    align-items: center;
   }
 
   .containerbtn {
@@ -39,6 +39,48 @@
     font-size: 25px !important;
     padding: 8px 16px !important;
   }
+
+  .Gtext {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 2vh;
+  }
+
+  
+  .textoSolo button {
+    width: 90%; 
+    max-width: 350px; 
+    max-height: 50px;
+    margin: 4px auto; 
+  }
+
+  #upcomingButton{
+    font-size: 15px;
+  }
+
+
+
+  .circuloUFOContainer {
+    flex-direction: column; 
+    align-items: center; 
+
+  }
+
+  .imagenIzquierda {
+    width: 90%; 
+    max-width: 300px; 
+    margin-bottom: 20px; 
+    z-index: 16;
+  }
+
+  .circuloUFO {
+    width: 60%; 
+    margin: 20px auto; 
+    z-index: 16;
+    scale: 200%;
+  }
+
 
 }
 
@@ -173,13 +215,21 @@
   border: 3px solid rgba(5,5,5, 0);
 }
 
+/* Estilos del botón cuando se hace hover */
 .textoSolo button:hover {
   background-color: #000228;
-  background-color: rgba(124,155,160, 1);
-  border: 3px solid rgba(255, 255 ,255, 1);
+  background-color: rgba(124, 155, 160, 1);
+  border: 3px solid rgba(255, 255, 255, 1);
   color: #3A405C;
   letter-spacing: 5px;
 }
+
+/* Aplicar filtro de desenfoque a la imagen */
+.circuloUFOImage {
+  filter: blur(20px); /* Aplica el filtro de desenfoque inicialmente */
+  transition: filter 0.3s ease; /* Transición para la propiedad filter */
+}
+
 
 /*Slider semicirculo*/
 .containerSlider {
@@ -200,7 +250,7 @@
 
 .circuloUFO {
   display: block;
-  width: 35%;
+  width: 20%;
   margin:  40px auto; /* Ajusta el espacio entre la circuloUFO y la imagen de la derecha */
   border-radius: 100% 30% 100% 30%;
   border: 2px solid rgba(50, 50, 50, 1);
@@ -210,12 +260,10 @@
   animation: transform-7 5s infinite alternate;
   transform: perspective(400px) rotateY(0deg);
   object-fit: contain;
+
 }
 
-.blured {
-   transition: all 0.5s;
-   animation: blurAnimation 3s infinite;
-}
+
 
 
 .circuloUFO:hover {
@@ -231,19 +279,12 @@
   }
 }
 
-@keyframes blurAnimation {
-  0%, 100% {
-    filter: blur(5px); /* Aplica el desenfoque */
-  }
-  50% {
-    filter: blur(0); /* Quita el desenfoque */
-  }
-}
 
 .circuloUFO img {
   display: block;
   width: 100%;
   height: auto;
+  filter: blur(20px);
 }
 
 .circuloUFO:hover {
@@ -266,6 +307,12 @@
   align-items: center;
   position:fixed;
   z-index: 1;
+  background-size: cover;
+  background-position: left; /* Establece la posición inicial desde la izquierda */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .stars-01{
   content: "";

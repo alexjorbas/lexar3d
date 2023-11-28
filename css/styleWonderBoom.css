@@ -10,17 +10,22 @@
   align-items: center;
 }
 
-.loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url('imgs/LoadingGif.gif') 50% 50% no-repeat rgb(249,249,249);
-    opacity: .8;
+
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  text-align: center;
+  z-index: 101;
 }
 
+#loading-image {
+  z-index: 101;
+  border-radius: 0px;
+}
 
 /* mobil */
 
@@ -78,6 +83,26 @@
   .textPrograms{
    scale: 30%;
    margin-top: -35%;
+  }
+
+  #loading {
+    background-color: #111111; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 9999; 
+  }
+
+  #loading-image {
+    max-width: 100px; 
+    max-height: 100px; 
+    position: fixed; 
+    top: 45%; 
+    left: 45%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10000; 
   }
 
 
@@ -465,6 +490,12 @@ img {
   align-items: center;
   position:fixed;
   z-index: 1;
+  background-size: cover;
+  background-position: left; /* Establece la posición inicial desde la izquierda */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .stars-01{
   content: "";

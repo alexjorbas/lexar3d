@@ -7,6 +7,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
 }
 
 /* mobil */
@@ -25,7 +26,6 @@
     gap: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
-  
   }
   
   .imatge {
@@ -39,18 +39,32 @@
   }
 
 
-
-.gallery {
-    flex-direction: column;
+  .gallery {
+    flex-direction: column; 
+    align-items: center; 
+    width: calc(100% - 40px); /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Asegura que no se desborde horizontalmente */
   }
 
-.gallery-item {
-    width: 100%;
-    margin: 0 0 30px 0;
+  .gallery-item {
+    margin: 0 !important;
   }
 
+  .textoSolo button {
+    width: calc(100% - 40px) !important; /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
+    font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+  }
 
+  .MainTitol{
+    margin: 100px auto !important;
+  }
 
+  .MainTitol button {
+    width: calc(150% - 0px) !important; /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
+    font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+  }
 
 }
 
@@ -159,7 +173,44 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
+
+
+
+
 /*galleria d'imatges*/
+
+.MainTitol {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom:-100px;
+  z-index: 18;
+}
+
+.MainTitol button {
+  margin-top: 20px;
+  max-width: 570px;
+  width: 570px;
+  max-height: 120px;
+  height: 120px;
+  border-radius: 40px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #FFF;
+  background-color: rgba(20, 20, 20, 1);
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  position: relative;
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.MainTitol button:hover {
+  background-color: #000228;
+  border: 3px solid rgba(0, 2 ,40, 1);
+  color: #007FFF;
+  letter-spacing: 5px;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +219,6 @@
   margin: 50px auto; /* Agregado margen superior e inferior */
   cursor: pointer;
   z-index: 16;
-  margin: 0 200px;
 }
 
 .gallery-item {
@@ -201,7 +251,6 @@
 }
 
 .textoSolo button:hover {
-  background-color: #000228;
   background-color: rgba(255,255,255, 1);
   border: 3px solid rgba(255, 255 ,255, 1);
   color: #000;
@@ -233,6 +282,12 @@
   align-items: center;
   position:fixed;
   z-index: 1;
+  background-size: cover;
+  background-position: left; /* Establece la posición inicial desde la izquierda */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .stars-01{
   content: "";

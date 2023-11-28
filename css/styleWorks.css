@@ -7,6 +7,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
 }
 
 /* mobil */
@@ -20,6 +21,7 @@
     align-content: space-between;
     flex-direction: column; /* Agregar esta línea */
     width: 95%;
+    align-items: center;
   }
 
   .containerbtn {
@@ -41,12 +43,17 @@
     padding: 8px 16px !important;
     }
 
+
+  .AllMenu{
+    z-index: 16;
+  }
+
   .works1, .works2, .works3, .works4 {
-  transform: rotate(45deg);
-  max-width: 200px;
-  max-height: 200px;
-  margin-right: 20px;
-  margin-left: 20px;
+    transform: rotate(45deg);
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .button-container2{
@@ -351,6 +358,11 @@
   position:fixed;
   z-index: 1;
   background-size: cover;
+  background-position: left; /* Establece la posición inicial desde la izquierda */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .stars-01{
   background-size: cover;

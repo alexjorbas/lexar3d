@@ -18,7 +18,12 @@
 <title>Portfolio Alex Jorba</title>
 </head>
 <body>
-  <div class="loader"></div>
+
+  <div id="loading">
+    <img id="loading-image" src="imgs/loading.gif" alt="Loading..." />
+  </div>
+
+
     <div class="containerbtn">
       <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
       <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
@@ -126,11 +131,12 @@
   <div class="stars-05"></div>
 </div>
 
-<script type="text/javascript">
-$(window).load(function() {
-    $(".loader").fadeOut("slow");
-});
+<script>
+  $(window).load(function() {
+    $('#loading').hide();
+  });
 </script>
+
 
 </body>
 </html>

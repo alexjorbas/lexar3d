@@ -7,13 +7,10 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
 }
 
 
-@font-face {
-    font-family: Goldman;
-    src: url("../fonts/Goldman-Regular.ttf");
-}
 
 /* mobil */
 
@@ -181,6 +178,8 @@
   color:#B2CFC5;
   padding: 15px;
   text-align: center; 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
 .contentInfo2{
@@ -203,6 +202,8 @@
   color: rgba(29, 32, 46, 1);  
   padding: 15px;
   text-align: center; 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
 }
 
 .centered {
@@ -222,6 +223,11 @@
   position:fixed;
   z-index: 1;
   background-size: cover;
+  background-position: left; /* Establece la posición inicial desde la izquierda */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .stars-01{
   background-size: cover;
