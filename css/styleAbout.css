@@ -10,6 +10,33 @@
   align-items: center;
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px; 
+  background: rgb(253,255,155);
+  background: linear-gradient(0deg, rgba(253,255,155,1) 0%, rgba(227,231,4,1) 15%, rgba(0,0,0,1) 41%, rgba(0,0,0,1) 56%, rgba(227,231,4,1) 85%, rgba(253,255,155,1) 100%);
+}
+
+/* Firefox */
+/* Modificar el scrollbar en Firefox */
+* {
+  scrollbar-color: #333 #f5f5f5; /* Color del scrollbar */
+}
+
+/* Estilo de la barra de desplazamiento horizontal en WebKit */
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar-horizontal {
+  height: 10px; /* Altura del scrollbar horizontal */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #333; /* Color del "thumb" del scrollbar horizontal */
+  border-radius: 5px; /* Borde redondeado del "thumb" horizontal */
+}
+
 
 
 /* mobil */

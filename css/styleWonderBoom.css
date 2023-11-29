@@ -11,6 +11,7 @@
 }
 
 
+
 #loading {
   position: fixed;
   display: block;
@@ -19,6 +20,7 @@
   top: 0;
   left:0;
   text-align: center;
+  opacity: 0.7;
   z-index: 101;
 }
 
@@ -26,6 +28,34 @@
   z-index: 101;
   border-radius: 0px;
 }
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px; 
+  background: rgb(0,215,255);
+  background: linear-gradient(0deg, rgba(0,215,255,1) 0%, rgba(0,127,255,1) 15%, rgba(0,0,0,1) 41%, rgba(0,0,0,1) 56%, rgba(0,127,255,1) 85%, rgba(0,215,255,1) 100%);
+}
+
+/* Firefox */
+/* Modificar el scrollbar en Firefox */
+* {
+  scrollbar-color: #333 #f5f5f5; /* Color del scrollbar */
+}
+
+/* Estilo de la barra de desplazamiento horizontal en WebKit */
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar-horizontal {
+  height: 10px; /* Altura del scrollbar horizontal */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #333; /* Color del "thumb" del scrollbar horizontal */
+  border-radius: 5px; /* Borde redondeado del "thumb" horizontal */
+}
+
 
 /* mobil */
 
@@ -224,7 +254,6 @@
   transition: all 0.5s;
   z-index: 20;
   scale: 250%;
-  
 }
 
 .buttonBack:hover{

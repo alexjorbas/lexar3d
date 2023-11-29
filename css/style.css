@@ -11,6 +11,32 @@
   
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000; /* Color del "thumb" del scrollbar */
+  border-radius: 5px; /* Borde redondeado del "thumb" */
+}
+
+/* Firefox */
+/* Modificar el scrollbar en Firefox */
+* {
+  scrollbar-color: #333 #f5f5f5; /* Color del scrollbar */
+}
+
+/* Estilo de la barra de desplazamiento horizontal en WebKit */
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar-horizontal {
+  height: 10px; /* Altura del scrollbar horizontal */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #333; /* Color del "thumb" del scrollbar horizontal */
+  border-radius: 5px; /* Borde redondeado del "thumb" horizontal */
+}
+
 /* mobil */
 
 @media only screen and (max-width: 768px) {
