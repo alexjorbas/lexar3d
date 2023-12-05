@@ -75,7 +75,15 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
   }
 
   .crossContainer {
-    max-height:100px; 
+    flex-direction: column;
+    height: auto;
+    margin-top: 100px !important;
+  }
+
+  .button {
+    width: 45%; /* Ajuste del ancho para móviles */
+    max-width: none; /* Elimina el ancho máximo para móviles */
+    margin: 10px 0px  !important;
   }
 
 
@@ -195,15 +203,16 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: auto;
   position: relative;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 
 .button {
-  position: absolute;
-  width: 10%;
-  margin: 10px;
+  position: relative; 
+  width: 20%; 
+  max-width: 200px; 
+  margin:0px  80px ;
   height: auto;
   display: flex;
   justify-content: center;
@@ -212,35 +221,39 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
   transition: all 1s;
 }
 
-.button:hover{
-    transform: rotate(15deg);
+.button:hover {
+  transform: rotate(15deg);
+
 }
 
 .button img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; 
+  object-fit: contain; 
+
 }
 
+/* Posiciones */
 .top {
-  top: 0;
-  position: center;
+  top: calc(50% - 45%);
+  order: 1;
 }
 
 .bottom {
-  bottom:0%;
-  position: center;
-
+  bottom: calc(50% - 45%);
+  order: 2; 
 }
 
 .left {
-  top: 20%;
-  left: 30%;
+  top: 30%;
+  left: 0;
+  order: 3; 
 }
 
 .right {
-  top: 20%;
-  right: 30%;
+  top: 30%;
+  right: 0;
+  order: 4;
 }
 
 
