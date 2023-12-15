@@ -7,11 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/styleMotionVideos.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <title>Portfolio Alex Jorba</title>
 </head>
 <body>
+  <div id="loading">
+    <img id="loading-image" src="imgs/loading.png" alt="Loading..." />
+    <img id="loading-image2" src="imgs/loading.png" alt="Loading..." />
+  </div>
     <div class="containerbtn">
       <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
       <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
@@ -21,88 +26,76 @@
     </div> 
 
 
-  <div class="contenido">
-    <div class="Gtext1">
-      <div class="textoSolo1">
-        <button>MOTION GRAPHICS</button>
-      </div>
-    </div>
+    <div class="MainTitol">
+  <button>MOTION VIDEOS</button>
+</div>  
 
-   <div class="videoGrp" >
-      <video class="videoSol " width="900" controls>
+<div class="gallery">
+  <div class="gallery-item">
+    <video class="Workies"  controls>
         <source src="video/DEMO_REEL.mp4" type="video/mp4">
         <source src="video/DEMO_REEL.ogg" type="video/ogg">
         Your browser does not support HTML video.
-      </video>
-      <video class="videoSol" width="900" controls>
-        <source src="video/ProjecteImatgesLectors_01.mp4" type="video/mp4">
-        <source src="video/ProjecteImatgesLectors_01.ogg" type="video/ogg">
-        Your browser does not support HTML video.
-      </video> 
+    </video>
+    <div class="textoSolo">
+      <button>DEMO REEL ANIMATION</button>
     </div>
-
-
-    <div class="Gtext">
-      <div class="textoSolo">
-        <button>DEMO REEL ANIMATION</button>
-      </div>
-      <div class="textoSolo">
-        <button>EL9TV Weather Pics Spot</button>
-      </div>
+  </div>
+  <div class="gallery-item">
+    <video class="Workies"  controls>
+      <source src="video/ProjecteImatgesLectors_01.mp4" type="video/mp4">
+      <source src="video/ProjecteImatgesLectors_01.ogg" type="video/ogg">
+      Your browser does not support HTML video.
+    </video> 
+    <div class="textoSolo">
+      <button>EL9TV Weather Pics Spot</button>
     </div>
+  </div>
 
-
-
-    <div class="videoGrp" >
-      <video class="videoSol" width="900" controls>
+  <div class="gallery-item">
+    <video class="Workies "  controls>
         <source src="video/UVIC2.mp4" type="video/mp4">
         <source src="video/UVIC2.ogg" type="video/ogg">
         Your browser does not support HTML video.
-      </video>
-      <video class="videoSol" width="900" controls>
+    </video>
+    <div class="textoSolo">
+      <button>UVIC LOGO PROMOTION</button>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <video class="Workies"  controls>
         <source src="video/UVIC.mp4" type="video/mp4">
         <source src="video/UVIC.ogg" type="video/ogg">
-        Your browser does not support HTML video.
-      </video> 
+      Your browser does not support HTML video.
+    </video> 
+    <div class="textoSolo">
+      <button>UVIC ANIMATION</button>
     </div>
+  </div>
 
 
-    <div class="Gtext">
-      <div class="textoSolo">
-        <button>UVIC LOGO PROMOTION</button>
-      </div>
-      <div class="textoSolo">
-        <button>UVIC ANIMATION</button>
-      </div>
-    </div>
-
-
-
-
-    <div class="videoGrp" >
-      <video class="videoSol" width="900" controls>
+  <div class="gallery-item">
+    <video class="Workies "  controls>
         <source src="video/Pigeon_AlexJorba.mp4" type="video/mp4">
         <source src="video/Pigeon_AlexJorba.ogg" type="video/ogg">
         Your browser does not support HTML video.
-      </video>
-      <video class="videoSol" width="900" controls>
-        <source src="video/Pigeon2_AlexJorba.mp4" type="video/mp4">
+    </video>
+    <div class="textoSolo">
+      <button>BIG SMOKE Ep.1</button>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <video class="Workies"  controls>
+      <source src="video/Pigeon2_AlexJorba.mp4" type="video/mp4">
         <source src="video/Pigeon2_AlexJorba.ogg" type="video/ogg">
-        Your browser does not support HTML video.
-      </video> 
+      Your browser does not support HTML video.
+    </video> 
+    <div class="textoSolo">
+      <button>BIG SMOKE Ep.2</button>
     </div>
+  </div>
 
-
-    <div class="Gtext">
-      <div class="textoSolo">
-        <button>BIG SMOKE Ep.1</button>
-      </div>
-      <div class="textoSolo">
-        <button>BIG SMOKE Ep.2</button>
-      </div>
-    </div>
-
-    <div class="imagePrograms">
+  <div class="imagePrograms">
       <img src="imgs/illustrator.png" class="programs">
       <img src="imgs/after.png" class="programs">
       <img src="imgs/premiere.png" class="programs">
@@ -115,6 +108,10 @@
     </div>  
   </div>
 
+</div>
+
+  
+
 
 
 <div class="fons">
@@ -125,6 +122,15 @@
   <div class="stars-05"></div>
 </div>
 
+<script>
+    $(window).on('load', function() {
+      $('#loading').fadeOut('slow'); 
+    });
+
+
+
+
+</script>
 
 
 </body>

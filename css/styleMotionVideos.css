@@ -10,6 +10,58 @@
   align-items: center;
 }
 
+/*Loading*/
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.992;
+  z-index: 101;
+  background-color: #111111;
+}
+
+#loading-image {
+  position: absolute;
+  width: 100px; 
+  height: 100px; 
+  z-index: 102; 
+  animation: loader 1s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotate(360deg); /* Rotación completa */
+  }
+}
+
+
+#loading-image2 {
+  position: absolute;
+  width: 250px; 
+  height: 250px; 
+  z-index: 102; 
+  animation: loader2 1.5s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes loader2 {
+  from {
+    transform: rotate(360deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotate(0deg); /* Rotación completa */
+  }
+}
+
 
 ::-webkit-scrollbar {
   width: 10px; /* Ancho del scrollbar */
@@ -45,10 +97,6 @@
  body {
     overflow-x: hidden;
     overflow-y: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    flex-direction: column; /* Agregar esta línea */
     width: 95%;
   }
 
@@ -71,43 +119,61 @@
     padding: 8px 16px !important;
   }
 
- .Gtext{
-    flex-direction:column;
-    max-width: 100px;
- 
+   .gallery {
+    flex-wrap: nowrap !important;
+    flex-direction: column; 
+    align-items: center; 
+    width: calc(100% - 40px); /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Asegura que no se desborde horizontalmente */
+  }
+
+  .gallery-item {
+    margin: 0 !important;
   }
 
   .textoSolo button {
+    width: calc(100% - 40px) !important; /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
+    font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+  }
+
+  .MainTitol{
+    margin: 100px auto !important;
+  }
+
+  .MainTitol button {
+    width: calc(150% - 0px) !important; /* Resta el margen de ambos lados */
+    max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
+    font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+  }
+
+  #loading {
+    background-color: #111111; 
+    z-index: 9999; 
+    top: -50px;
+    left: auto;
+  }
+
+  #loading-image {
+    max-width: 50px; 
+    max-height: 50px; 
+    z-index: 10000; 
+  }
+   #loading-image2 {
+    max-width: 150px; 
+    max-height: 150px; 
+    position: absolute;
+    z-index: 10000; 
+  }
+
+ .imagePrograms{
   scale: 30%;
-  right: 375px;
-
-  }
-
-  .textoSolo1 button {
-  scale: 30%;
-  }
-
-
-  .videoSol {
-    width:275px;
-
-  }
-
-.contenido{
-  max-width: 300px;
-}
-
-.videoGrp{
-  flex-direction: column;  
-}
-
-.imagePrograms{
-  scale: 20%;
+  margin-top: -20%;
   }
 
   .textPrograms{
    scale: 30%;
-   margin-top: -55%;
+   margin-top: -35%;
   }
 
 
@@ -227,48 +293,65 @@
 
 /*CONTENIDO PAG*/
 
-
-.contenido {
-  padding: 20px;
-  z-index: 16;
-}
-
-.videoGrp{
- border-radius: 10px;
- display: flex;
- justify-content: center;
- z-index: 16;
-}
-
-.videoSol{
-  border-radius: 20px; 
-  margin: auto 1vh;
-  border: 3px solid rgba(40,40,40,1);
-  /*border: 3px solid rgba(0,127,255);*/
-
-}
-
-.Gtext {
+.MainTitol {
   display: flex;
-  justify-content:center;
-  z-index: 16;
-  margin: 20px auto;
-  margin-bottom: 20vh;
-  flex-wrap: wrap;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom:-100px;
+  z-index: 18;
 }
 
-.Gtext1 {
+.MainTitol button {
+  margin-top: 20px;
+  max-width: 570px;
+  width: 570px;
+  max-height: 120px;
+  height: 120px;
+  border-radius: 40px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #FFF;
+  background-color: rgba(20, 20, 20, 1);
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  position: relative;
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.MainTitol button:hover {
+  background-color: #000228;
+  border: 3px solid rgba(0, 2 ,40, 1);
+  color: #007FFF;
+  letter-spacing: 5px;
+}
+
+.gallery {
   display: flex;
-  justify-content:center;
-  z-index: 16;
-  margin: 20px auto;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  margin: 50px auto; /* Agregado margen superior e inferior */
+  cursor: pointer;
+  z-index: 16;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 30px; /* Ajusta el valor del margen según tus preferencias */
+  text-align: center;
+  margin-top: 100px;
 }
 
 
+.gallery-item .textoSolo {
+  margin-top: 10px;
+}
 
 .textoSolo button {
+  max-width: 570px;
   width: 570px;
+  max-height: 120px;
   height: 120px;
   border-radius: 40px;
   font-size: 30px;
@@ -276,55 +359,44 @@
   color: #FFF;
   background-color: rgba(20,20,20,1);
   transition: all 0.5s;
-  margin: auto 15vh;
   letter-spacing: 1px;
   position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(0,0,0, 1);
+  zoom: reset;
 }
 
 .textoSolo button:hover {
-  background-color: #000228;
   background-color: rgba(255,255,255, 1);
   border: 3px solid rgba(255, 255 ,255, 1);
   color: #000;
   letter-spacing: 5px;
 }
 
-.textoSolo1 button {
-  width: 570px;
-  height: 120px;
+
+.Workies {
+  width: 100%;
+  height: auto;
   border-radius: 40px;
-  font-size: 30px;
-  font-family: 'Goldman', cursive;
-  color: #FFF;
-  background-color: rgba(20,20,20,1);
-  transition: all 0.5s;
-  margin: auto 15vh;
-  letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(0,0,0, 1);
+  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
+  box-shadow: 0 0 20px 2px rgba(0, 2 ,40, 0.9);
 }
 
-.textoSolo1 button:hover {
-  background-color: #000228;
-  background-color: rgba(255,255,255, 1);
-  border: 3px solid rgba(255, 255 ,255, 1);
-  color: #000;
-  letter-spacing: 5px;
+
+.Workies:hover {
+  box-shadow: 0 0 20px 10px rgba(0, 127 ,255, 0.8);
 }
+
+
 
 .imagePrograms{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 5vh  auto;
-  z-index: 16;
-
 }
 
 .programs{
-  margin: auto 19vh;
+  margin: 5vh 19vh;
   transition: all 1s;
 }
 
@@ -335,8 +407,7 @@
 .textPrograms{
   display: flex;
   flex-direction: row;
-  margin-bottom: 30vh;
-  justify-content: center;
+  margin-bottom: 5vh;
 }
 
 .animate-charcter
@@ -401,7 +472,7 @@
               350px 1650px #007FFF, 1700px 1200px #007FFF, 450px 800px #007FFF, 2000px 500px #007FFF,
               350px 1600px #007FFF, 1350px 1350px #007FFF, 1100px 1750px #007FFF, 150px 950px #007FFF,
               1600px 1700px #007FFF, 400px 1000px #007FFF, 650px 1050px #007FFF, 2000px 1650px #007FFF,
-              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #9E9E9E,
+              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #007FFF,
               20px 1350px #007FFF, 850px 1800px #007FFF, 450px 1150px #007FFF, 50px 700px #007FFF,
               100px 1400px #007FFF, 1000px 1700px #007FFF, 250px 600px #007FFF, 1200px 850px #007FFF,
               1750px 20px #007FFF, 100px 1550px #007FFF, 1200px 1650px #007FFF, 1500px 700px #007FFF,
@@ -435,7 +506,7 @@
               350px 1650px #007FFF, 1700px 1200px #007FFF, 450px 800px #007FFF, 2000px 500px #007FFF,
               350px 1600px #007FFF, 1350px 1350px #007FFF, 1100px 1750px #007FFF, 150px 950px #007FFF,
               1600px 1700px #007FFF, 400px 1000px #007FFF, 650px 1050px #007FFF, 2000px 1650px #007FFF,
-              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #9E9E9E,
+              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #007FFF,
               20px 1350px #007FFF, 850px 1800px #007FFF, 450px 1150px #007FFF, 50px 700px #007FFF,
               100px 1400px #007FFF, 1000px 1700px #007FFF, 250px 600px #007FFF, 1200px 850px #007FFF,
               1750px 20px #007FFF, 100px 1550px #007FFF, 1200px 1650px #007FFF, 1500px 700px #007FFF,
@@ -469,7 +540,7 @@
               350px 1650px #007FFF, 1700px 1200px #007FFF, 450px 800px #007FFF, 2000px 500px #007FFF,
               350px 1600px #007FFF, 1350px 1350px #007FFF, 1100px 1750px #007FFF, 150px 950px #007FFF,
               1600px 1700px #007FFF, 400px 1000px #007FFF, 650px 1050px #007FFF, 2000px 1650px #007FFF,
-              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #9E9E9E,
+              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #007FFF,
               20px 1350px #007FFF, 850px 1800px #007FFF, 450px 1150px #007FFF, 50px 700px #007FFF,
               100px 1400px #007FFF, 1000px 1700px #007FFF, 250px 600px #007FFF, 1200px 850px #007FFF,
               1750px 20px #007FFF, 100px 1550px #007FFF, 1200px 1650px #007FFF, 1500px 700px #007FFF,
@@ -503,7 +574,7 @@
               350px 1650px #007FFF, 1700px 1200px #007FFF, 450px 800px #007FFF, 2000px 500px #007FFF,
               350px 1600px #007FFF, 1350px 1350px #007FFF, 1100px 1750px #007FFF, 150px 950px #007FFF,
               1600px 1700px #007FFF, 400px 1000px #007FFF, 650px 1050px #007FFF, 2000px 1650px #007FFF,
-              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #9E9E9E,
+              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #007FFF,
               20px 1350px #007FFF, 850px 1800px #007FFF, 450px 1150px #007FFF, 50px 700px #007FFF,
               100px 1400px #007FFF, 1000px 1700px #007FFF, 250px 600px #007FFF, 1200px 850px #007FFF,
               1750px 20px #007FFF, 100px 1550px #007FFF, 1200px 1650px #007FFF, 1500px 700px #007FFF,
@@ -537,7 +608,7 @@
               350px 1650px #007FFF, 1700px 1200px #007FFF, 450px 800px #007FFF, 2000px 500px #007FFF,
               350px 1600px #007FFF, 1350px 1350px #007FFF, 1100px 1750px #007FFF, 150px 950px #007FFF,
               1600px 1700px #007FFF, 400px 1000px #007FFF, 650px 1050px #007FFF, 2000px 1650px #007FFF,
-              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #9E9E9E,
+              1100px 700px #007FFF, 1350px 600px #007FFF, 600px 1900px #007FFF, 1500px 600px #007FFF,
               20px 1350px #007FFF, 850px 1800px #007FFF, 450px 1150px #007FFF, 50px 700px #007FFF,
               100px 1400px #007FFF, 1000px 1700px #007FFF, 250px 600px #007FFF, 1200px 850px #007FFF,
               1750px 20px #007FFF, 100px 1550px #007FFF, 1200px 1650px #007FFF, 1500px 700px #007FFF,
