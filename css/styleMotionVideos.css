@@ -176,9 +176,6 @@
    margin-top: -55%;
   }
 
-  .animate-charcter{
-    text-align: center;
-  }
 
 
 
@@ -416,6 +413,7 @@
 
 .animate-charcter
 {   
+    text-align: center;
     margin: auto 15vh;
    text-transform: uppercase;
   background-image: linear-gradient(
@@ -435,7 +433,8 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 40px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
 }
 
 @keyframes textclip {

@@ -468,7 +468,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 40px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
 }
 
 @keyframes textclip {
