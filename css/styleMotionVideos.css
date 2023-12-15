@@ -167,13 +167,17 @@
   }
 
  .imagePrograms{
-  scale: 30%;
+  scale: 20%;
   margin-top: -20%;
   }
 
   .textPrograms{
    scale: 30%;
-   margin-top: -35%;
+   margin-top: -55%;
+  }
+
+  .animate-charcter{
+    text-align: center;
   }
 
 
