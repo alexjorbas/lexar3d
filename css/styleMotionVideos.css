@@ -135,6 +135,8 @@
     width: calc(100% - 40px) !important; /* Resta el margen de ambos lados */
     max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
     font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+    margin-bottom: 70px;
+    margin-top: -10px;
   }
 
   .MainTitol{
@@ -334,11 +336,12 @@
   margin: 50px auto; /* Agregado margen superior e inferior */
   cursor: pointer;
   z-index: 16;
+  max-width: 90%;
 }
 
 .gallery-item {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 30px; /* Ajusta el valor del margen según tus preferencias */
   text-align: center;
   margin-top: 100px;
@@ -380,6 +383,7 @@
   border-radius: 40px;
   transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
   box-shadow: 0 0 20px 2px rgba(0, 2 ,40, 0.9);
+  margin-bottom: 20px;
 }
 
 
