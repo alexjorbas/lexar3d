@@ -6,11 +6,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/styleAbout.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Portfolio Alex Jorba</title>
   </head>
   <body>
+    <div id="loading">
+      <img id="loading-image" src="imgs/loading.png" alt="Loading..." />
+      <img id="loading-image2" src="imgs/loading.png" alt="Loading..." />
+    </div>
+  
       <div class="containerbtn">
         <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
         <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
@@ -56,5 +62,12 @@
       <div class="stars-04"></div>
       <div class="stars-05"></div>
     </div>
+
+    <script>
+      $(window).on('load', function() {
+        $('#loading').fadeOut('slow'); 
+      });
+    </script>
+
   </body>
 </html>

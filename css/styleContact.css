@@ -9,6 +9,58 @@
   overflow-y: scroll;
 }
 
+/*Loading*/
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.992;
+  z-index: 101;
+  background-color: #111111;
+}
+
+#loading-image {
+  position: absolute;
+  width: 100px; 
+  height: 100px; 
+  z-index: 102; 
+  animation: loader 1s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotate(360deg); /* Rotación completa */
+  }
+}
+
+
+#loading-image2 {
+  position: absolute;
+  width: 250px; 
+  height: 250px; 
+  z-index: 102; 
+  animation: loader2 1.5s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes loader2 {
+  from {
+    transform: rotate(360deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotate(0deg); /* Rotación completa */
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* Ancho del scrollbar */
 }
@@ -84,6 +136,25 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
     width: 45%; /* Ajuste del ancho para móviles */
     max-width: none; /* Elimina el ancho máximo para móviles */
     margin: 10px 0px  !important;
+  }
+
+  #loading {
+    background-color: #111111; 
+    z-index: 9999; 
+    top: -50px;
+    left: auto;
+  }
+
+  #loading-image {
+    max-width: 50px; 
+    max-height: 50px; 
+    z-index: 10000; 
+  }
+   #loading-image2 {
+    max-width: 150px; 
+    max-height: 150px; 
+    position: absolute;
+    z-index: 10000; 
   }
 
 
