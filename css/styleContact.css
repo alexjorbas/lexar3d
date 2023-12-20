@@ -99,7 +99,7 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
 @media only screen and (max-width: 768px) {
  body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
@@ -304,6 +304,12 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
 
 }
 
+.Separation{
+  position: relative;
+  margin-bottom: 400px;
+}
+
+
 /* Posiciones */
 .top {
   top: calc(50% - 45%);
@@ -326,6 +332,8 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
   right: 0;
   order: 4;
 }
+
+
 
 
 /*estrelles*/
