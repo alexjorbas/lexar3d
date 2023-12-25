@@ -135,6 +135,7 @@
     width: calc(100% - 40px) !important; /* Resta el margen de ambos lados */
     max-width: calc(100% - 40px); /* Ajusta el ancho del botón al 100% del contenedor con margen */
     font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+    margin-bottom: 50px;
   }
 
   .MainTitol{
@@ -150,7 +151,6 @@
    #loading {
     background-color: #111111; 
     z-index: 9999; 
-    top: -50px;
     left: auto;
   }
 

@@ -124,10 +124,9 @@
     padding: 8px 16px !important;
   }
 
-  #loading {
+   #loading {
     background-color: #111111; 
     z-index: 9999; 
-    top: -50px;
     left: auto;
   }
 

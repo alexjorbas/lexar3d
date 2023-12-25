@@ -189,7 +189,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   #loading {
     background-color: #111111; 
     z-index: 9999; 
-    top: -50px;
     left: auto;
   }
 

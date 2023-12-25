@@ -141,7 +141,6 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
   #loading {
     background-color: #111111; 
     z-index: 9999; 
-    top: -50px;
     left: auto;
   }
 
@@ -155,6 +154,10 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
     max-height: 150px; 
     position: absolute;
     z-index: 10000; 
+  }
+
+  .Separation{
+  margin-bottom: 200px !important;
   }
 
 

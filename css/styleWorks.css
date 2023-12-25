@@ -101,10 +101,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
-    flex-direction: column; /* Agregar esta línea */
+    flex-direction: column; 
     width: 95%;
-    align-items: center;
+    align-items: center;  
   }
+
 
   .containerbtn {
     flex-wrap: wrap;
@@ -126,9 +127,7 @@
     }
 
 
-  .AllMenu{
-    z-index: 16;
-  }
+
 
   .works1, .works2, .works3, .works4 {
     transform: rotate(45deg);
@@ -140,22 +139,25 @@
 
   .button-container2{
     position: absolute;
-    margin-top: 250px;
-   
+    margin: 250px -20px !important;
+    width: ;
+    
+    
   }
 
-  .works3{
-    left: 18%;
-  }
+  .works3, .works4 {
+  margin-right: 30px !important;
+  margin-left: 40px !important;
 
-   .works4{
-    right: 17%;
-  }
+}
+
 
   .AllMenu {
   scale: 60%;
-  max-width: 400px;
   height: 200px;
+  z-index: 16;
+  margin-left: 10px;
+  margin-bottom: 300px;
   }
 
   .textZonas {
@@ -173,13 +175,13 @@
   }
 
   .FH{
-    margin-top: 8.4%;
-    left: 33%;
+    margin-top: 28%;
+    margin-left: -38%;
   }
 
   .OP{
-    margin-top: 6%;
-    margin-left: -1%;
+    margin-top: 20%;
+    margin-right: -10%;
   }
 
   #loading {
