@@ -152,7 +152,6 @@
     z-index: 9999; 
     left: auto;
   }
-
   #loading-image {
     max-width: 50px; 
     max-height: 50px; 
@@ -163,6 +162,10 @@
     max-height: 150px; 
     position: absolute;
     z-index: 10000; 
+  }
+
+  .buttonBack, .buttonBack2{
+  left: 5% !important;
   }
 
 
@@ -299,7 +302,7 @@
   position: fixed;
   transition: all 0.5s;
   z-index: 20;
-  scale: 260%;
+  scale: 250%;
 }
 
 .buttonBack2:hover{
