@@ -23,7 +23,7 @@
     <img id="loading-image2" src="imgs/loading.png" alt="Loading..." />
   </div>
   
-    <div class="containerbtn">
+    <div class="containerbtn" id="up">
       <a href="index.html" class="btn btn-izquierda">HOME<span></span></a>
       <a href="works.html" class="btn btn-izquierda">WORKS<span></span></a>
       <img src="imgs/MYLOGO.png" class="imatge" />
@@ -36,6 +36,13 @@
     <button style="color: #007FFF; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #9ACCFF; border: none" >&#10531;</button>
   </div>
 </a>
+
+<a href="#up">
+  <div class="buttonBack2">
+    <button id="scrollButton" style="color: #007FFF; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #9ACCFF; border: none " >&#x21a5;</button>
+  </div>
+</a>
+
 
 <div class="container">
     <input type="radio" name="slider" id="item-1" checked>
@@ -153,9 +160,39 @@
 </div>
 
 <script>
-    $(window).on('load', function() {
-      $('#loading').fadeOut('slow'); 
-    });
+  //loading
+  $(window).on('load', function() {
+    $('#loading').fadeOut('slow'); 
+  });
+
+
+    // Desplazamiento suave
+    document.getElementById('scrollButton').addEventListener('click', function() {
+  scrollToTop(1000); // Duración del desplazamiento en milisegundos (1000ms = 1 segundo)
+});
+
+function scrollToTop(duration) {
+  const startingY = window.pageYOffset;
+  const targetY = 0;
+  const distance = targetY - startingY;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) {
+      startTime = currentTime;
+    }
+    const timeElapsed = currentTime - startTime;
+    const easing = function(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    };
+    window.scrollTo(0, startingY + distance * easing(timeElapsed / duration));
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
 </script>
 
 </body>

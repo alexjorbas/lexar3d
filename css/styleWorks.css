@@ -23,7 +23,6 @@
   opacity: 0.992;
   z-index: 101;
   background-color: #111111;
-  margin-top: 400px;
 }
 
 #loading-image {
@@ -188,7 +187,6 @@
   #loading {
     background-color: #111111; 
     z-index: 9999; 
-    top: -400px;
     left: auto;
   }
 
