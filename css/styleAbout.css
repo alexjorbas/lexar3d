@@ -304,14 +304,31 @@
   font-weight: 600;
 }
 
+.lastInfo {
+  height: auto;
+  margin-top: 10px;
+}
+
 .centered {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 100%;
   z-index: 16;
+  margin: 20px 0px;
 }
+
+.avatar{
+  border-radius: 50%;
+  max-width: 200px;
+  transition: all 0.5s;
+}
+
+.avatar:hover{
+  box-shadow: 0 0 20px 10px rgba(227,231,4, 0.8);
+}
+
  
 
 
