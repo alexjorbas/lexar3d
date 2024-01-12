@@ -210,7 +210,11 @@
     z-index: 10000; 
   }
 
+  .trail { 
+    background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
+  }
 
+  
 
 
 }

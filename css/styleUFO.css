@@ -141,7 +141,13 @@ div.gallery img {
   .titol{
     margin: 50px !important;
   }
+  .trail { 
+    background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
+  }
+
+
 }
+
 
 @media only screen and (max-width: 500px) {
   .responsive {
@@ -160,7 +166,11 @@ div.gallery img {
   text-align: left;
   text-decoration: underline;
   color: black;
+  width: 5%;
+  cursor: pointer;
 }
+
+/*------END PHONE PART----------*/
 
 
 /*estrelles*/
