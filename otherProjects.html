@@ -161,18 +161,105 @@
     });
     
     function openImage(event) {
-      event.preventDefault();
-      var imageSrc = event.currentTarget.href;
-      var overlay = document.getElementById('overlay');
-      var overlayImage = document.getElementById('overlayImage');
-      overlayImage.src = imageSrc;
-      overlay.style.display = 'flex';
+  event.preventDefault();
+  var imageSrc = event.currentTarget.href;
+  var overlay = document.getElementById('overlay');
+  var overlayImage = document.getElementById('overlayImage');
+
+  overlayImage.src = imageSrc;
+  overlayImage.style.transform = 'scale(0.7)';
+  overlayImage.style.opacity = '0';
+  overlay.style.display = 'flex';
+
+  var scale = 0.7;
+  var opacity = 0;
+  var increment = 0.05; // Valor para incrementar el tamaño en cada iteración
+  var intervalTime = 10; // Intervalo de tiempo entre cada iteración (en milisegundos)
+
+  var scaleInterval = setInterval(function() {
+    if (scale < 1) {
+      scale += increment;
+      overlayImage.style.transform = 'scale(' + scale + ')';
+    }
+    if (opacity < 1) {
+      opacity += increment;
+      overlayImage.style.opacity = opacity;
+    }
+    if (scale >= 1 && opacity >= 1) {
+      clearInterval(scaleInterval); // Detener el intervalo cuando se alcanza el tamaño y opacidad deseados
+    }
+  }, intervalTime);
+}
+
+function closeImage() {
+  var overlay = document.getElementById('overlay');
+  var overlayImage = document.getElementById('overlayImage');
+
+  overlayImage.style.transform = 'scale(0.7)';
+  overlayImage.style.opacity = '0';
+
+  overlay.style.display = 'none';
+}
+
+  </script>
+
+<script>
+    //trail cursor
+    var dots = [],
+        mouse = {
+          x: 0,
+          y: 0
+        };
+
+    var Dot = function() {
+      this.x = 0;
+      this.y = 0;
+      this.node = (function(){
+        var n = document.createElement("div");
+        n.className = "trail";
+        document.body.appendChild(n);
+        return n;
+      }());
+    };
+
+    Dot.prototype.draw = function() {
+      this.node.style.left = this.x + "px";
+      this.node.style.top = this.y + "px";
+    };
+
+    for (var i = 0; i < 12; i++) {
+      var d = new Dot();
+      dots.push(d);
     }
 
-    function closeImage() {
-      var overlay = document.getElementById('overlay');
-      overlay.style.display = 'none';
+    function draw() {
+      var x = mouse.x,
+          y = mouse.y;
+      
+      dots.forEach(function(dot, index, dots) {
+        var nextDot = dots[index + 1] || dots[0];
+        
+        dot.x = x;
+        dot.y = y;
+        dot.draw();
+        x += (nextDot.x - dot.x) * .6;
+        y += (nextDot.y - dot.y) * .6;
+
+      });
     }
-  </script>
+
+    addEventListener("mousemove", function(event) {
+      mouse.x = event.pageX;
+      mouse.y = event.pageY;
+    });
+
+    function animate() {
+      draw();
+      requestAnimationFrame(animate);
+    }
+
+    animate(); 
+    </script>
+    
 </body>
 </html>

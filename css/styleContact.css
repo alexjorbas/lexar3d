@@ -9,6 +9,14 @@
   overflow-y: scroll;
 }
 
+/*cursor*/
+.trail { 
+    position: absolute;
+    height: 12px; width: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #8E0429,#F94E7C);
+}
+
 /*Loading*/
 #loading {
   position: fixed;

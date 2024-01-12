@@ -7,9 +7,24 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
-  align-items: center; 
+  align-items: center;
 }
 
+.css1{
+position:absolute;top:0px;left:0px;
+width:16px;height:16px;
+font-family:Arial,sans-serif;
+font-size:16px;
+text-align:center;
+font-weight:bold;
+}
+.css2{
+position:absolute;top:0px;left:0px;
+width:10px;height:10px;
+font-family:Arial,sans-serif;
+font-size:10px;
+text-align:center;
+}
 
 /*Loading*/
 #loading {

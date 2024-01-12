@@ -10,6 +10,13 @@
   align-items: center;
 }
 
+/*cursor*/
+.trail { 
+    position: absolute;
+    height: 12px; width: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #004890,#00CDFF);
+}
 
 /*Loading*/
 #loading {

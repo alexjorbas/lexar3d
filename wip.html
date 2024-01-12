@@ -7,11 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <title>Portfolio Alex Jorba</title>
- <style>
+<style>
   body {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@
   }
 
   img {
+    position: absolute;
     width: 50%;
     height: auto;
     max-width: 100%; /* Cambiado a % para adaptarse a la pantalla */
@@ -31,7 +33,7 @@
 
   .botoned {
     position: absolute;
-    top: 85%;
+    top: 15%;
     left: 52%;
     transform: translate(-50%, -50%);
   }
@@ -57,7 +59,64 @@
     border: 3px solid rgba(255, 255, 255, 1);
     color: #000;
     letter-spacing: 5px;
+
   }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.range {
+  top: 35%;
+  position: relative;
+  background-color: #333;
+  width: 30%;
+  height: 6%;
+  transition: all 0.5s;
+  transform: skew(30deg);
+  font-size: 1vw;
+  font-family: 'Orbitron', monospace;
+  
+  &:before {
+    --width: calc(var(--p) * 1%);
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #69B5C3;
+    z-index: 0;
+    animation: load .5s forwards linear, glitch 2s infinite linear;
+  }
+  
+  &:after {
+    counter-reset: progress var(--p);
+    content: counter(progress) '%';
+    color: #000;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%) skewX(-30deg);
+    z-index: 1;
+  }
+  
+  &__label {
+    transform: skew(-30deg) translateY(-100%);
+    line-height: 1.5;
+  }
+}
+
+@keyframes load {
+  to {
+    width: var(--width);
+  }
+}
+
+.range:hover{
+  transform: scale(1.15) skew(30deg);
+}
+
+
 
   @media only screen and (max-width: 768px) {
     body {
@@ -80,6 +139,11 @@
       max-width: 90%; /* Ajustado para dispositivos más pequeños */
       font-size: 6vw; /* Ajustado para dispositivos más pequeños */
     }
+
+    .range {
+      width: 60%;
+      font-size: 4vw;
+      }
   }
 </style>
 
@@ -91,6 +155,8 @@
     <button >RETURN BACK</button>
   </a>
 </div>
+
+<div class="range" style="--p:70"></div>
 
 </body>
 </html>
