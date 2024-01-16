@@ -10,21 +10,14 @@
   align-items: center;
 }
 
-.css1{
-position:absolute;top:0px;left:0px;
-width:16px;height:16px;
-font-family:Arial,sans-serif;
-font-size:16px;
-text-align:center;
-font-weight:bold;
+/*cursor*/
+.trail { 
+    position: absolute;
+    height: 12px; width: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #00ff00,#024902);
 }
-.css2{
-position:absolute;top:0px;left:0px;
-width:10px;height:10px;
-font-family:Arial,sans-serif;
-font-size:10px;
-text-align:center;
-}
+
 
 /*Loading*/
 #loading {
@@ -191,6 +184,10 @@ text-align:center;
     max-height: 150px; 
     position: absolute;
     z-index: 10000; 
+  }
+
+  .trail { 
+    background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
 
 

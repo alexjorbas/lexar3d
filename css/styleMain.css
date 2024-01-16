@@ -176,6 +176,10 @@
   .trail { 
     background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
+
+  .contenedorCont {
+  font-size:20px !important;
+}
   
 
 }
@@ -199,7 +203,7 @@
 .imatge {
   max-width: 20%;
   height: auto;
-  margin: auto; /* Centramos automáticamente la imagen vertical y horizontalmente */
+  margin: auto;  
   transition: all 0.5s; 
   z-index: 2;
 }
@@ -212,24 +216,24 @@
 
 .btn {
   text-align: center;
-  padding: 0.4% 1%; /* Utilizamos un 5% de padding arriba y abajo y un 10% de padding a los lados */
-  width: 300%; /* Establecemos el ancho en un 300% */
+  padding: 0.4% 1%;  
+  width: 300%;  
   cursor: pointer;
   color: #B2CFC5;
   transition: all 0.5s;
   font-family: 'Goldman', cursive;
   z-index: 100;
-  margin: 0 4%; /* Utilizamos un 6% de margen a los lados */
+  margin: 0 4%;  
   padding-top: 0.5%;
   position: relative;
-  font-size: 180%; /* Establecemos el tamaño de fuente en un 4% */
+  font-size: 180%;  
   text-decoration: none;
   white-space: nowrap; 
   height: 30px;
 }
 
 .btn:hover {
-  color: #007FFF; /* Cambiamos el color del texto a blanco al pasar el cursor sobre el botón */
+  color: #007FFF;  
 }
 
 .btn-izquierda {
@@ -259,7 +263,7 @@
   z-index: 16;
   transition: all 0.5s;
   border: 3px solid rgba(0, 127 ,255, 0.4);
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border-radius: 60px;  
 }
 
 .btn::after {
@@ -273,7 +277,7 @@
   transition: all 0.5s;
   border: 3px solid rgba(0, 127 ,255, 0.4);
   background-color:#000;
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border-radius: 60px; 
 }
 
 .btn:hover::before {
@@ -294,8 +298,8 @@
 
 .MainTitol {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center;  
+  align-items: center;  
   margin-bottom:-100px;
   z-index: 18;
 }
@@ -329,7 +333,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center; 
-  margin: 50px auto; /* Agregado margen superior e inferior */
+  margin: 50px auto;  
   cursor: pointer;
   z-index: 16;
 }
@@ -337,7 +341,7 @@
 .gallery-item {
   width: 100%;
   max-width: 570px;
-  margin: 0 30px; /* Ajusta el valor del margen según tus preferencias */
+  margin: 0 30px;  
   text-align: center;
   margin-top: 100px;
 }
@@ -358,7 +362,7 @@
   background-color: rgba(20,20,20,1);
   transition: all 0.5s;
   letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  position: relative;  
   border: 3px solid rgba(0,0,0, 1);
   zoom: reset;
 }
@@ -375,11 +379,11 @@
   width: 100%;
   height: auto;
   border-radius: 40px;
-  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */ 
+  transition: all 0.5s;  
 }
 
 .Workies:hover{
-  transform: scale(1.1); /* Agrandamos la imagen al 120% con la propiedad scale */
+  transform: scale(1.1);  
 }
 
 .linky{
@@ -395,38 +399,46 @@
   z-index: 16;
 }
 
- .persiana:hover {
+.persiana:hover {
   transform: translateY(-30%);
   transition: 2s;
 }
 
-
-
- .persianaBG {
+.persianaBG {
   width: 100%;
   height: 100%;
   background-color: black;
   border-radius: 40px;
+  position: relative; 
 }
 
-
 /*contador*/
-.contenedorCont{
+.contenedorCont {
   color: #007fff;
   font-size: 200%;
   font-family: 'Space Grotesk', sans-serif;
   position: absolute;
-  top:75%;
-  left: 11%;
+  top: 75%; 
+  left: 50%; 
+  transform: translateX(-50%); 
   opacity: 0;
   text-shadow: 0 0 20px rgba(0, 203, 255, 0.4);
   transition: opacity 0.4s ease 0.4s;
- }
+}
 
- .persianaBG:hover .contenedorCont {
-  opacity: 1;  
+.persianaBG:hover .contenedorCont {
+  opacity: 1;
   transition: opacity 1s ease 1s;
 }
+
+.animPersiana {
+  transition: transform 0.5s ease-in-out; 
+}
+
+.animPersiana:hover {
+  transform: translateY(1.2);  
+}
+
 
 
 
