@@ -209,7 +209,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
     z-index: 10000; 
   }
 
-  .buttonBack2{
+  .buttonBack, .buttonBack2{
   left: 3% !important;
   }
 
@@ -330,6 +330,21 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 
 
 /*boto back*/
+.buttonBack{
+  display: flex;
+  left: 5%;
+  position: absolute;
+  position: fixed;
+  transition: all 0.5s;
+  z-index: 20;
+  scale: 250%;
+}
+
+.buttonBack:hover{
+  transform: rotate(-45deg);
+  stroke: #FFF;
+}
+
 .buttonBack2{
   display: flex;
   left: 5%;
