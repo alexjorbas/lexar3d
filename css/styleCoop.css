@@ -177,10 +177,7 @@
     background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
 
-  .contenedorCont {
-  font-size:20px !important;
-}
-  
+    
 
 }
 
@@ -380,119 +377,21 @@
   height: auto;
   border-radius: 40px;
   transition: all 0.5s;  
+  box-shadow: 0 0 20px 2px rgba(0, 2 ,40, 0.9);
+  margin: ;
 }
 
-.Workies:hover{
-  transform: scale(1.1);  
+
+
+
+.Workies:hover {
+  box-shadow: 0 0 20px 10px rgba(0, 127 ,255, 0.8);
+  transform: scale(1.02);
 }
 
 .linky{
   flex: 1;
   border: 0;
-}
-
-.persianaBG {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  border-radius: 40px;
-  position: relative; 
-  overflow: hidden;
-}
-
-.persiana {
-  width: 100%;
-  height: 100%;
-  transition: transform 4s ease;
-  z-index: 16;
-}
-
-.persiana:hover  {
-  transform: translateY(-30%);
-  transition: 2s;
-}
-
-
-/*contador*/
-.contenedorCont {
-  color: #007fff;
-  font-size: 200%;
-  font-family: 'Space Grotesk', sans-serif;
-  position: absolute;
-  top: 75%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  opacity: 0;
-  text-shadow: 0 0 20px rgba(0, 203, 255, 0.4);
-  transition: opacity 0.4s ease 0.4s;
-}
-
-.persianaBG:hover .contenedorCont {
-  opacity: 1;
-  transition: opacity 1s ease 1s;
-}
-
-.animPersiana {
-  transition: transform 2.5s ease-in-out; 
-}
-
-.animPersiana:hover {
-  transform: translateY(1.2);  
-}
-
-
-
-
-  .countdown {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  filter: contrast(20);
-  background-color: black;
-  overflow: hidden;
-}
-
-.countdown span {
-  font-size: 80px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1;
-  filter: blur(0.2rem);
-  display: block;
-  transition: all 1.5s ease;
-  opacity: 0;
-  filter: blur(0.6rem);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);  
-}
-
-
-@keyframes letteranim {
-  0% {
-    opacity: 0;
-    filter: blur(0.6rem);
-  }
-  5% {
-    opacity: 1;
-    filter: blur(0.2rem);
-  }
-  10% {
-    opacity: 1;
-    filter: blur(0.2rem);
-  }
-  20% {
-    opacity: 0;
-    filter: blur(0.6rem);
-  }
-  100% {
-    opacity: 0;
-    filter: blur(0.6rem);
-  }
 }
 
 

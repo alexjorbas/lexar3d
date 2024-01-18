@@ -7,6 +7,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
+  align-items: center;
 }
 
 /*cursor*/
@@ -75,8 +76,8 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px; 
- background: rgb(255,85,131);
-background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, rgba(0,0,0,1) 41%, rgba(0,0,0,1) 56%, rgba(186,5,54,1) 85%, rgba(255,85,131,1) 100%);
+  background: rgb(255,85,131);
+  background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, rgba(0,0,0,1) 41%, rgba(0,0,0,1) 56%, rgba(186,5,54,1) 85%, rgba(255,85,131,1) 100%);
 }
 
 /* Firefox */
@@ -111,7 +112,6 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
-    flex-direction: column; /* Agregar esta línea */
     width: 95%;
   }
 
@@ -134,17 +134,6 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
     padding: 8px 16px !important;
   }
 
-  .crossContainer {
-    flex-direction: column;
-    height: auto;
-    margin-top: 100px !important;
-  }
-
-  .button {
-    width: 45%; /* Ajuste del ancho para móviles */
-    max-width: none; /* Elimina el ancho máximo para móviles */
-    margin: 10px 0px  !important;
-  }
 
   #loading {
     background-color: #111111; 
@@ -164,14 +153,17 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
     z-index: 10000; 
   }
 
-  .Separation{
-  margin-bottom: 200px !important;
+  .circular  {
+  scale: 50%;
+  position: absolute;
+  margin-top: 700px !important;
   }
-
 
   .trail { 
     background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
+
+
 
 
 }
@@ -285,69 +277,66 @@ background: linear-gradient(0deg, rgba(255,85,131,1) 0%, rgba(186,5,54,1) 15%, r
 }
 
 
-/*content web*/
-.crossContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  position: relative;
-  margin-top: 200px;
-}
-
-.button {
-  position: relative; 
-  width: 20%; 
-  max-width: 200px; 
-  margin:0px  80px ;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 16;
-  transition: all 1s;
-}
-
-.button:hover {
-  transform: rotate(15deg);
-
-}
-
-.button img {
-  width: 100%;
-  height: auto; 
-  object-fit: contain; 
-
-}
 
 .Separation{
-  position: relative;
-  margin-bottom: 400px;
+  margin-top: 5%;
+}
+
+/*content web*/
+.circular {
+  --g: 4%;   /* the gap */
+  --s: 400%; /* the size */
+  display: grid;
+  border-radius: 50%;
+  z-index: 20;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.circular:hover {
+  opacity: 1;
+}
+
+.circular > a {
+  grid-area: 1/1;
+  width: 400px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(var(--_x,0),var(--_y,0));
+  cursor: pointer;
+  z-index: 0;
+  transition: .3s, z-index 0s .3s;
+}
+.circular a:hover {
+  --_i: 1;
+  z-index: 1;
+  transition: transform .2s, clip-path .3s .2s, z-index 0s;
+}
+.circular:hover a {
+  transform: translate(0,0);
+}
+.circular > a:nth-child(1) {
+  clip-path: polygon(50% 50%,calc(50%*var(--_i,0)) calc(120%*var(--_i,0)),0 calc(100%*var(--_i,0)),0 0,100% 0,100% calc(100%*var(--_i,0)),calc(100% - 50%*var(--_i,0)) calc(120%*var(--_i,0)));
+  --_y: calc(-1*var(--g))
+}
+.circular > a:nth-child(2) {
+  clip-path: polygon(50% 50%,calc(100% - 120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100% - 100%*var(--_i,0)) 0,100% 0,100% 100%,calc(100% - 100%*var(--_i,0)) 100%,calc(100% - 120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
+  --_x: var(--g)
+}
+.circular > a:nth-child(3) {
+  clip-path: polygon(50% 50%,calc(100% - 50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)),100% calc(100% - 120%*var(--_i,0)),100% 100%,0 100%,0 calc(100% - 100%*var(--_i,0)),calc(50%*var(--_i,0)) calc(100% - 120%*var(--_i,0)));
+  --_y: var(--g)
+}
+.circular > a:nth-child(4) {
+  clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
+  --_x: calc(-1*var(--g))
 }
 
 
-/* Posiciones */
-.top {
-  top: calc(50% - 45%);
-  order: 1;
-}
 
-.bottom {
-  bottom: calc(50% - 45%);
-  order: 2; 
-}
 
-.left {
-  top: 30%;
-  left: 0;
-  order: 3; 
-}
 
-.right {
-  top: 30%;
-  right: 0;
-  order: 4;
-}
 
 
 
