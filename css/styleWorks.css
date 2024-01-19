@@ -214,6 +214,14 @@
     background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
 
+  .btn:hover::before {
+    transform: rotate(0deg) !important;
+  }
+
+  .btn:hover::after {
+    transform: rotate(0deg) !important;
+  }
+
   
 
 
@@ -358,12 +366,12 @@
 }
 
 .FH{
-  top: 30%;
+  top: 40%;
   left: 33%;
 }
 
 .OP{
-  top: 52%;
+  top: 40%;
   left: 50%;
 }
 

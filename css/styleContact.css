@@ -163,6 +163,28 @@
     background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
 
+  .btn:hover::before {
+  transform: rotate(0deg) !important;
+  }
+
+  .btn:hover::after {
+  transform: rotate(0deg) !important;
+  }
+
+  .MainTitol{
+    position: absolute;
+    width: 400px;
+  }
+
+  .MainTitol button {
+    margin-top: 950px !important;
+    width: 300px !important;  
+    max-width: calc(100% - 40px);  
+    font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
+  }
+
+
+
 
 
 
@@ -279,7 +301,7 @@
 
 
 .Separation{
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 /*content web*/
@@ -332,6 +354,43 @@
   clip-path: polygon(50% 50%,calc(120%*var(--_i,0)) calc(50%*var(--_i,0)),calc(100%*var(--_i,0)) 0,0 0,0 100%,calc(100%*var(--_i,0)) 100%,calc(120%*var(--_i,0)) calc(100% - 50%*var(--_i,0)));
   --_x: calc(-1*var(--g))
 }
+
+
+ .MainTitol {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  margin-bottom:-100px;
+  z-index: 18;
+}
+
+.MainTitol button {
+  margin-top: 20px;
+  max-width: 410px;
+  width: 570px;
+  max-height: 120px;
+  height: 120px;  
+  border-radius: 40px;
+  font-size: 40px;
+  font-family: 'Goldman', cursive;
+  color: #FFF;
+  background-color: rgba(0, 2, 40, 0);
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  position: relative;
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.MainTitol button:hover {
+  background-color: #000228;
+  border: 3px solid rgba(0, 2 ,40, 1);
+  color: #007FFF;
+  letter-spacing: 5px;
+}
+
+ 
+
+
 
 
 

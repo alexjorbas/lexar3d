@@ -29,18 +29,22 @@
   <div class="Separation"></div>
 
     <div class="circular">
-      <a href="https://www.instagram.com/lexar_3d/" target="blank">
+      <a href="https://www.instagram.com/lexar_3d/" target="blank" onmouseover="changeText('Instagram')">
         <img  src="imgs/INSTAG.png">
       </a>
-      <a href="mailto:alexjorbas@gmail.com" target="blank" >
+      <a href="mailto:alexjorbas@gmail.com" target="blank" onmouseover="changeText('Email')">
         <img  src="imgs/MAIL.png">
       </a>
-      <a href="https://www.artstation.com/lexar_3d" target="blank">
+      <a href="https://www.artstation.com/lexar_3d" target="blank" onmouseover="changeText('ArtStation')">
         <img  src="imgs/ArtStation.png">
       </a>
-      <a href="https://www.behance.net/al-extintor" target="blank">
+      <a href="https://www.behance.net/al-extintor" target="blank" onmouseover="changeText('Behance')">
         <img  src="imgs/BE.png">
       </a>
+    </div>
+
+    <div class="MainTitol">
+      <button id="mainButton"></button>
     </div>
 
 
@@ -64,6 +68,14 @@
     </script>
 
     <script>
+    //infoText
+      function changeText(newText) {
+      document.getElementById('mainButton').innerText = newText;
+      }
+
+
+
+
     //trail cursor
     var dots = [],
         mouse = {

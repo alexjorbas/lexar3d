@@ -178,9 +178,16 @@
   }
 
   .contenedorCont {
-  font-size:20px !important;
-}
+    font-size:20px !important;
+  }
   
+  .btn:hover::before {
+    transform: rotate(0deg) !important;
+  }
+
+  .btn:hover::after {
+    transform: rotate(0deg) !important;
+  }
 
 }
 
