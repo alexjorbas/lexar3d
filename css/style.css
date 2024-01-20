@@ -151,7 +151,6 @@
   .circuloUFOContainer {
     flex-direction: column; 
     align-items: center; 
-
   }
 
   .imagenIzquierda {
@@ -161,12 +160,14 @@
     z-index: 16;
   }
 
-  .circuloUFO {
+  .circuloUFO{
     width: 60%; 
     margin: 20px auto; 
     z-index: 16;
-    scale: 200%;
+    scale: 300%;
+    margin-top: 80px !important;
   }
+
 
    #loading {
     background-color: #111111; 
