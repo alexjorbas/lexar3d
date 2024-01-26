@@ -186,6 +186,10 @@
     transform: rotate(0deg) !important;
   }
 
+  .hover-image {
+  transform: translate(-50%, -135%) !important;
+}
+
 
 
 }
@@ -346,6 +350,7 @@
   margin: 0 30px; /* Ajusta el valor del margen según tus preferencias */
   text-align: center;
   margin-top: 100px;
+  position: relative;
 }
 
 .gallery-item .textoSolo {
@@ -387,7 +392,7 @@
 }
 
 .Workies:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .linky {
@@ -415,6 +420,32 @@ img[id^="overlayImage"] {
   max-height: 90%;
   border-radius: 10px;
 } 
+
+
+/*hover programa*/
+.hover-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);  
+}
+
+.hover-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  max-width: 100%;  
+  width: 30%;
+  transition: opacity 0.5s ease-in-out;   
+}
+
+.textoSolo button:hover ~ .hover-image,
+.textoSolo button:hover ~ .hover-background {
+  opacity: 1; 
+}
 
 
 
