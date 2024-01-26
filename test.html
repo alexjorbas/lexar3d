@@ -16,11 +16,62 @@
 <body>
    
 <model-viewer
-    src="models/UFOv2.glb"
-    alt="Unidentified Object"
-    auto-rotate
-    camera-controls
-  class="modelo"></model-viewer>
+  src="models/UFOv2.glb"
+  alt="Unidentified Object"
+  auto-rotate
+  camera-controls
+  poster="textures/UFO_lambert1_BaseColor.png" <!-- Puedes usar una imagen de póster -->
+>
+  <!-- Textura BaseColor -->
+  <img
+    src="textures/UFO_lambert1_BaseColor.png"
+    slot="base-color"
+    crossorigin="anonymous"
+    alt="BaseColor Texture"
+  />
+
+  <!-- Textura Roughness -->
+  <img
+    src="textures/UFO_lambert1_Roughness.png"
+    slot="roughness"
+    crossorigin="anonymous"
+    alt="Roughness Texture"
+  />
+
+  <!-- Textura Metallic -->
+  <img
+    src="textures/UFO_lambert1_Metalness.png"
+    slot="metallic"
+    crossorigin="anonymous"
+    alt="Metallic Texture"
+  />
+
+  <!-- Textura Emissive -->
+  <img
+    src="textures/UFO_lambert1_Emissive.png"
+    slot="emissive"
+    crossorigin="anonymous"
+    alt="Emissive Texture"
+  />
+
+  <!-- Textura Height -->
+  <img
+    src="textures/UFO_lambert1_Height.png"
+    slot="Height"
+    crossorigin="anonymous"
+    alt="Height Texture"
+  />
+
+  <!-- Textura Normal -->
+  <img
+    src="textures/UFO_lambert1_Normal.png"
+    slot="Normal"
+    crossorigin="anonymous"
+    alt="Normal Texture"
+  />
+</model-viewer>
+
+
  
  
 </body>
