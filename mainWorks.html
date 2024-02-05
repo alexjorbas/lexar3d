@@ -52,16 +52,36 @@
     </div>
   </div>
   <div class="gallery-item">
-    <a href="CIRRUS.html" class="linky">
-      <img src="imgs/CIRRUS/MINIATURA.png" class="Workies">
+    <a href="SBARRO.html" class="linky"> 
+     <div class="videoWrapper" style="background-image: url('imgs/SBARRO/banner.png'); background-size: cover;">
+       <video class="Workies video" autoplay loop muted  style="opacity: 0;">
+        <source src="video/SBARRO_PREVIEW_reduced.mp4" type="video/mp4">
+       </video>
+     </div>
+    </a>
+    <div class="textoSolo">
+      <button>Citroën Sbarro CUP</button>
+    </div>
+  </div>
+  <div class="gallery-item">
+    <a href="CIRRUS.html" class="linky"> 
+     <div class="videoWrapper" style="background-image: url('imgs/CIRRUS/MINIATURA.png'); background-size: cover;">
+       <video class="Workies video" autoplay loop muted  style="opacity: 0;">
+        <source src="video/CIRRUS_PREVIEW_reduced.mp4" type="video/mp4">
+       </video>
+     </div>
     </a>
     <div class="textoSolo">
       <button>CIRRUS SF50</button>
     </div>
   </div>
   <div class="gallery-item">
-    <a href="SCOTT.html" class="linky">
-      <img src="imgs/SCOTT/RENDER_INTERRUMPED_4k_ADAPTED.png" class="Workies">
+    <a href="SCOTT.html" class="linky"> 
+     <div class="videoWrapper" style="background-image: url('imgs/SCOTT/RENDER_INTERRUMPED_4k_ADAPTED.png'); background-size: cover;">
+       <video class="Workies video" autoplay loop muted  style="opacity: 0;">
+        <source src="video/SCOTT_PREVIEW_reduced.mp4" type="video/mp4">
+       </video>
+     </div>
     </a>
     <div class="textoSolo">
       <button>Scott Spark</button>
@@ -110,6 +130,26 @@
     });
 </script>
 
+<script>
+//video hover
+var videos = document.querySelectorAll(".video");
+var wrappers = document.querySelectorAll(".videoWrapper");
+
+for (let i = 0; i < videos.length; i++) {
+  let video = videos[i];
+  let wrapper = wrappers[i];
+
+  wrapper.addEventListener("mouseover", function() {
+    video.style.opacity = "1";
+    video.play();
+  });
+
+  wrapper.addEventListener("mouseout", function() {
+    video.pause();
+    video.style.opacity = "0";
+  });
+}
+</script>
 
 <script>
     //trail cursor
@@ -198,7 +238,7 @@ var countdownfunction = setInterval(function() {
   // Si la cuenta atrás termina, escribe algún texto
   if (distance < 0) {
     clearInterval(countdownfunction);
-    document.getElementById("countdown").innerHTML = "IN COMING";
+    document.getElementById("countdown").innerHTML = "UPCOMING";
   }
 }, 1000);
 </script>
