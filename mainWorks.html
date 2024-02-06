@@ -135,19 +135,21 @@
 var videos = document.querySelectorAll(".video");
 var wrappers = document.querySelectorAll(".videoWrapper");
 
-for (let i = 0; i < videos.length; i++) {
-  let video = videos[i];
-  let wrapper = wrappers[i];
+if(window.innerWidth > 768) {
+  for (let i = 0; i < videos.length; i++) {
+    let video = videos[i];
+    let wrapper = wrappers[i];
 
-  wrapper.addEventListener("mouseover", function() {
-    video.style.opacity = "1";
-    video.play();
-  });
+    wrapper.addEventListener("mouseover", function() {
+      video.style.opacity = "1";
+      video.play();
+    });
 
-  wrapper.addEventListener("mouseout", function() {
-    video.pause();
-    video.style.opacity = "0";
-  });
+    wrapper.addEventListener("mouseout", function() {
+      video.pause();
+      video.style.opacity = "0";
+    });
+  }
 }
 </script>
 
