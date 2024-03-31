@@ -288,7 +288,7 @@
 }
 
 .contentInfo:hover{
- transform:rotateX(40deg) skew(10deg);  
+ transform:rotateX(20deg) skew(5deg);  
 }
 
 .bio{
@@ -312,7 +312,7 @@
 }
 
 .contentInfo2:hover{
- transform:rotateX(40deg) skew(10deg);  
+ transform:rotateX(20deg) skew(5deg);  
 }
 
 .bio2{

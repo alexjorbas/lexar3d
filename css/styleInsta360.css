@@ -187,6 +187,13 @@
   transform: rotate(0deg) !important;
   }
 
+  .Separation2{
+    height: 180px !important;
+  }
+
+  .MainTitol button {
+    width: 380px !important;
+  }
 
 }
 
@@ -484,14 +491,13 @@ img {
 /*mes Info*/
 
 .moreInfo{
-  position: absolute;
-  margin: 110vh auto;
+  position: relative;
+  margin: auto auto;
   z-index: 16;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
 .textoSolo button {
@@ -514,6 +520,29 @@ img {
   background-color: rgba(255,255,255, 1);
   border: 3px solid rgba(255, 255 ,255, 1);
   color: #000;
+  letter-spacing: 5px;
+}
+
+.MainTitol button {
+  width: 400px;
+  height: 80px;
+  border-radius: 35px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #B2CFC5; 
+  background-color: rgba(60,64,91,1);
+  transition: all 0.5s;
+  margin: 5px 4px;
+  letter-spacing: 1px;
+  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  border: 3px solid rgba(0,0,0, 1);
+  z-index: 16;
+}
+
+.MainTitol button:hover {
+  background-color: #B2CFC5;
+  border: 3px solid rgba(126, 149 ,155, 1);
+  color:  rgba(60,64,91,1) ;
   letter-spacing: 5px;
 }
 
@@ -578,6 +607,11 @@ img {
   to {
     background-position: 200% center;
   }
+}
+
+.Separation2{
+  height: 550px;
+  width: 2px;
 }
 
 
