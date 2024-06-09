@@ -254,7 +254,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .imatge:hover {
-  transform: scale(1.2) rotateX(30deg);/* Agrandamos la imagen al 120% con la propiedad scale */
+  transform: scale(1.1) rotateZ(10deg);
 }
 
 

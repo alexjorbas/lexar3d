@@ -84,7 +84,7 @@
 /* Firefox */
 /* Modificar el scrollbar en Firefox */
 * {
-  scrollbar-color: #333 #f5f5f5; /* Color del scrollbar */
+  scrollbar-color: #000 #000; /* Color del scrollbar */
 }
 
 /* Estilo de la barra de desplazamiento horizontal en WebKit */
@@ -227,7 +227,7 @@
 }
 
 .imatge:hover {
-  transform: scale(1.2) rotateX(30deg);/* Agrandamos la imagen al 120% con la propiedad scale */
+  transform: scale(1.1) rotateZ(10deg);
 }
 
 /*BUTTONS*/

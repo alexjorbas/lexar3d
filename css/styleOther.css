@@ -220,7 +220,7 @@
 }
 
 .imatge:hover {
-  transform: scale(1.2) rotateX(30deg);/* Agrandamos la imagen al 120% con la propiedad scale */
+  transform: scale(1.1) rotateZ(10deg);
 }
 
 /*BUTTONS*/

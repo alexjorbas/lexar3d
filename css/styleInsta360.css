@@ -223,7 +223,7 @@
 }
 
 .imatge:hover {
-  transform: scale(1.2) rotateX(30deg);/* Agrandamos la imagen al 120% con la propiedad scale */
+  transform: scale(1.1) rotateZ(10deg);
 }
 
 /*BUTTONS*/
@@ -532,7 +532,7 @@ img {
   color: #B2CFC5; 
   background-color: rgba(60,64,91,1);
   transition: all 0.5s;
-  margin: 5px 4px;
+  margin: 8px 4px;
   letter-spacing: 1px;
   position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(0,0,0, 1);
