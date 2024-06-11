@@ -248,13 +248,15 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 .imatge {
   max-width: 20%;
   height: auto;
-  margin: auto; /* Centramos automáticamente la imagen vertical y horizontalmente */
-  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */
+  margin: auto; 
+  background-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 55%);
+  transition: all 0.5s; 
   z-index: 2;
 }
 
 .imatge:hover {
-  transform: scale(1.1) rotateZ(10deg);
+  transform: scale(1.05);
+  background-image: radial-gradient(circle at center, rgba(192, 42, 32, 1), rgba(0, 0, 0, 0) 55%);
 }
 
 

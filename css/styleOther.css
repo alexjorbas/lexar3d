@@ -214,13 +214,14 @@
 .imatge {
   max-width: 20%;
   height: auto;
-  margin: auto; /* Centramos automáticamente la imagen vertical y horizontalmente */
-  transition: all 0.5s; /* Agregamos una transición para que el cambio sea suave */
+  margin: auto; 
+  transition: all 0.5s; 
   z-index: 2;
 }
 
 .imatge:hover {
-  transform: scale(1.1) rotateZ(10deg);
+  transform: scale(1.05);
+  background-image: radial-gradient(circle at center, rgba(0, 127, 255, 0.8), rgba(0, 0, 0, 0) 60%);
 }
 
 /*BUTTONS*/
