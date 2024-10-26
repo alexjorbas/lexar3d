@@ -14,18 +14,24 @@
 <title>TESTING</title>
 </head>
 <body>
+
+    <div id="containers">
+            <div class="inici" id="mdl_size">
+            
+            <div class="mdl_view">
+                
+                <model-viewer src="models/UFO.glb" camera-controls disable-zoom id="view" camera-orbit="-365.2deg 85.27deg auto"></model-viewer>
+
+
+            </div>
+
+
+
+        </div>  
+
+</div>
    
-<model-viewer class="visor" src="models/UFO.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
-    <div class="progress-bar hide" slot="progress-bar">
-        <div class="update-bar"></div>
-    </div>
-    <button slot="ar-button" id="ar-button">
-        View in your space
-    </button>
-    <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-    </div>
-</model-viewer>
+
 
  
  
