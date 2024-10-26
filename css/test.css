@@ -1,20 +1,8 @@
  body {
-      background-color: black;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      font-family: 'Open Sans Condensed', sans-serif;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      align-items: center;
+      background-color: white;
     }
 
 
-.modelo{
-     position: absolute;
-     margin-top: 700px;
-     z-index: 20;
-     width: 150%;
-     height: 150%;
+.visor{
+
 }
