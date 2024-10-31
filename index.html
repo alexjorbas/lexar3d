@@ -36,7 +36,7 @@
   <div class="circuloUFOContainer">
     <img src="imgs/welcometext.gif" class="imagenIzquierda">
     <div class="circuloUFO">
-      <img src="imgs/index_upcoming2.png" class="circuloUFOImage">
+      <img src="imgs/index_upcoming_OLD.png" class="circuloUFOImage">
     </div>
   </div>
 </div>
@@ -46,6 +46,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const upcomingButton = document.getElementById('upcomingButton');
       const circuloUFOImage = document.querySelector('.circuloUFOImage');
+      const circuloUFO = document.querySelector('.circuloUFO');
 
       upcomingButton.addEventListener('mouseover', () => {
         circuloUFOImage.style.filter = 'none';
@@ -53,6 +54,14 @@
 
       upcomingButton.addEventListener('mouseout', () => {
         circuloUFOImage.style.filter = 'blur(20px)';
+      });
+
+      upcomingButton.addEventListener('mouseover', () => {
+        circuloUFO.style.borderRadius = '100% 30% 100% 30%';
+      });
+
+      upcomingButton.addEventListener('mouseout', () => {
+        circuloUFO.style.borderRadius = '30% 100% 30% 100%';
       });
     });
   </script>

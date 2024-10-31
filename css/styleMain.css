@@ -189,6 +189,10 @@
     transform: rotate(0deg) !important;
   }
 
+  .btn:hover {
+  transform: scale(1.0) !important;
+  }
+
 
 }
 
@@ -298,6 +302,11 @@
   transform: rotate(45deg);
   background-color: rgba(255, 255, 255, 0);
 }
+
+.btn:hover {
+  transform: scale(1.3);
+}
+
 
 
 

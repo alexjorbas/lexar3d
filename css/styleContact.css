@@ -183,7 +183,9 @@
     font-size: 20px !important; /* Reducción del tamaño de fuente para dispositivos móviles */
   }
 
-
+  .btn:hover {
+  transform: scale(1.0) !important;
+  }
 
 
 
@@ -297,6 +299,10 @@
 .btn:hover::after {
   transform: rotate(45deg);
   background-color: rgba(255, 255, 255, 0);
+}
+
+.btn:hover {
+  transform: scale(1.3);
 }
 
 

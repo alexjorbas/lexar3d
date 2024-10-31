@@ -151,6 +151,21 @@ div.gallery img {
     margin: 50px !important;
   }
 
+   .circuloUFOContainer {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  
+
+  .circuloUFO{
+    width: 60%; 
+    margin: 20px auto; 
+    z-index: 16;
+    scale: 300%;
+    margin-top: 80px !important;
+  }
+
 }
 
 
@@ -174,6 +189,61 @@ div.gallery img {
   width: 5%;
   cursor: pointer;
 }
+
+
+/*Slider semicirculo*/
+.containerSlider {
+  text-align: center;
+  z-index: 100;
+}
+
+.circuloUFOContainer {
+  display: flex;
+  justify-content: flex-end; /* Desplaza los elementos a la derecha */
+  align-items: center;
+}
+
+
+
+.circuloUFO {
+  display: block;
+  width: 40%;
+  margin:  40px auto; /* Ajusta el espacio entre la circuloUFO y la imagen de la derecha */
+  border-radius: 90% 90% 90% 90%;
+  border: 2px solid rgba(50, 50, 50, 1);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s;
+  animation: transform-7 5s infinite alternate;
+  transform: perspective(400px) rotateX(0deg);
+  object-fit: contain;
+
+}
+
+
+
+
+.circuloUFO:hover {
+  transform: perspective(400px) translateZ(150px) rotateY(180deg);
+}
+
+@keyframes transform-7 {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+
+.circuloUFO img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 
 /*------END PHONE PART----------*/
 

@@ -32,14 +32,14 @@
       <a href="https://www.instagram.com/lexar_3d/" target="blank" onmouseover="changeText('Instagram')">
         <img  src="imgs/INSTAG.png">
       </a>
-      <a href="mailto:alexjorbas@gmail.com" target="blank" onmouseover="changeText('Email')">
-        <img  src="imgs/MAIL.png">
+      <a href="mailto:alexjorbas@gmail.com"  onclick="copyToClipboard('alexjorbas@gmail.com')" onmouseover="changeText('alexjorbas@')">
+        <img  src="imgs/MAIL.png" alt="Email">
       </a>
       <a href="https://www.artstation.com/lexar_3d" target="blank" onmouseover="changeText('ArtStation')">
         <img  src="imgs/ArtStation.png">
       </a>
-      <a href="https://cara.app/lexar3d" target="blank" onmouseover="changeText('Cara')">
-        <img  src="imgs/CA.png">
+      <a href="https://www.youtube.com/@alex_jorba/videos" target="blank" onmouseover="changeText('Youtube')">
+        <img  src="imgs/YT.png">
       </a>
     </div>
 
@@ -73,6 +73,18 @@
       document.getElementById('mainButton').innerText = newText;
       }
 
+
+    //portapapeles
+      function copyToClipboard(text) {
+        // Crear un elemento temporal para contener el texto
+        var el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alert('Contact mail copied to clipboard!');
+      }
 
 
 
