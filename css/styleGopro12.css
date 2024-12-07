@@ -673,7 +673,6 @@ img {
 }
 
 .VID:hover{
-  transform: scale(.98);
   box-shadow: 0 0 20px 10px rgba(0, 127 ,255, 0.8);
 }
 
