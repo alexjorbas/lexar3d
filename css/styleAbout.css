@@ -166,6 +166,27 @@
   transform: scale(1.0) !important;
   }
 
+  .contentInfo, .contentInfo2{
+    width: 90% !important;
+  }
+
+  .MainTitol button {
+    width: 350px !important;
+  }
+
+  .grupo{
+    width: 350px !important;
+  }
+
+  .softwname{
+    font-size: 60% !important;
+  }
+
+  .range{
+    height: 20px !important;
+  }
+
+
 
 }
 
@@ -286,7 +307,7 @@
 /*content*/
 
 .contentInfo{
-   width: 60%;
+  width: 60%;
   margin: 30px auto;
   display: flex;
   justify-content: center;
@@ -335,7 +356,7 @@
 
 .lastInfo {
   height: auto;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .centered {
@@ -345,7 +366,7 @@
   align-items: center;
   height: 100%;
   z-index: 16;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .avatar{
@@ -358,7 +379,103 @@
   box-shadow: 0 0 20px 10px rgba(227,231,4, 0.8);
 }
 
+.MainTitol button {
+  width: 800px;
+  height: 80px;
+  border-radius: 35px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #B2CFC5; 
+  background-color: rgba(60,64,91,1);
+  transition: all 0.5s;
+  margin-top: 200px;
+  letter-spacing: 1px;
+  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  border: 3px solid rgba(0,0,0, 1);
+  z-index: 16;
+}
+
+.MainTitol button:hover {
+  background-color: #B2CFC5;
+  border: 3px solid rgba(126, 149 ,155, 1);
+  color:  rgba(60,64,91,1) ;
+  letter-spacing: 5px;
+}
+
+.grupo{
+  width: 60%;
+  z-index: 16;
+  margin: 30px auto ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.softwname{
+  text-align: center;
+  width:300px;
+  color: #B2CFC5;
+  font-size: 150%;
+  font-family: 'Goldman', cursive;
+  text-shadow: 0px 0px 30px rgba(255, 255, 0, 0.6);
+}
+
+
+.softw{
+  width: 10%;
+  margin: auto 50px;
+  transition: all 0.5s;
+}
+
+.softw:hover{
+  transform: scale(1.02) skew(5deg);
+}
+
+.range {
+  position: relative;
+  z-index: 16;
+  background-color: #005696;
+  width: 600px;
+  height: 45px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  transform: skew(-5deg);
+
+  
+  &:before {
+    --width: calc(var(--p) * 1%);
+    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #F3E600;
+    z-index: 0;
+    border-radius: 40px;
+    animation: load .5s forwards linear, glitch 2s infinite linear;
+  }
+  
  
+  
+  &__label {
+    transform: skew(-30deg) translateY(-100%);
+    line-height: 1.5;
+  }
+}
+
+@keyframes load {
+  to {
+    width: var(--width);
+  }
+}
+
+.range:hover{
+  transform: scale(1.02) skew(-20deg);
+}
 
 
 /*estrelles*/

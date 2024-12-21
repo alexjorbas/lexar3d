@@ -418,6 +418,7 @@
 
 .works1:hover, .works2:hover {
   transform: scale(1.2);
+
 }
 
 .works1 img, .works2 img {
@@ -479,6 +480,7 @@
   object-fit: cover;
   transform: rotate(-45deg);
 }
+
 
 
 
