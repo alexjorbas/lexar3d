@@ -388,7 +388,7 @@
   color: #B2CFC5; 
   background-color: rgba(60,64,91,1);
   transition: all 0.5s;
-  margin-top: 200px;
+  margin-top: 150px;
   letter-spacing: 1px;
   position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(0,0,0, 1);
@@ -410,7 +410,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .softwname{
