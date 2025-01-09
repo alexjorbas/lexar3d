@@ -222,7 +222,7 @@
   }
 
   .nearImage {
-    scale: 160%;
+    scale: 120%;
     max-width: 50%;
     margin: 50px auto !important;
     border-radius: 20px !important;
@@ -232,8 +232,13 @@
     max-width: 55%  !important; 
   }
 
+  .imageCompar {
+    display: block !important;
+    width: 100% !important;
+  }
+
   .ImatgesVertical img {
-    margin:50px 40px !important; 
+    margin:50px 0px !important; 
   }
 
   .animate-charcter, .bio{
@@ -596,7 +601,7 @@
 }
 
 .imageCompar {
-  display: inline-block;
+  display: inline-block; 
   text-align: center;
   vertical-align: top;  
   width: 45%;
