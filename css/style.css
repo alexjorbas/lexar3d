@@ -100,6 +100,21 @@
 
 /* mobil */
 
+@media only screen and (max-width: 1024px) {
+  .btn {
+    margin: 0 2% !important;
+  } 
+
+  .circuloUFOContainer {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .circuloUFO{
+    scale: 150%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
  body {
     overflow-x: hidden;
@@ -114,18 +129,20 @@
     gap: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
-  
   }
+
   
   .imatge {
     max-width: 100%;
     margin: 20px 0;
   }
   
-  .btn {
+   .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
-  }
+    margin: 0 20% !important;
+    }
+ 
 
   .Gtext {
     display: flex;
@@ -146,10 +163,6 @@
     font-size: 15px;
   }
 
-  .circuloUFOContainer {
-    flex-direction: column; 
-    align-items: center; 
-  }
 
   .imagenIzquierda {
     width: 90%; 
@@ -202,6 +215,9 @@
 
 
 }
+
+
+
 
 
 /* distribució pag */
@@ -378,7 +394,7 @@
 .circuloUFO {
   display: block;
   width: 20%;
-  margin:  40px auto; /* Ajusta el espacio entre la circuloUFO y la imagen de la derecha */
+  margin:  40px auto;  
   border-radius: 30% 100% 30% 100%;
   border: 2px solid rgba(50, 50, 50, 1);
   overflow: hidden;
