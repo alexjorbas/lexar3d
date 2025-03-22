@@ -565,26 +565,41 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   max-width: 50%;
 }
 
+/*background stars*/
+.fullcover {
+  position: relative;
+}
+
+.difuminado {
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -99; 
+  backdrop-filter: blur(5px);
+}
 
 
 /*estrelles*/
 .fons{
   align-items: center;
   position:fixed;
-  z-index: 1;
+  z-index: -100;
   background-size: cover;
-  background-position: left; /* Establece la posición inicial desde la izquierda */
+  background-position: left;  
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
+
 .stars-01{
-  background-size: cover;
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
               550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
               1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
@@ -614,11 +629,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .stars-02{
-  background-size: cover;
   content: "";
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
               550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
               1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
@@ -648,11 +662,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .stars-03{
-  background-size: cover;
   content: "";
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
               550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
               1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
@@ -682,11 +695,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .stars-04{
-  background-size: cover;
   content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
               550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
               1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
@@ -716,7 +728,39 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .stars-05{
-  background-size: cover;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
+              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
+              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
+              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
+              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
+              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
+              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
+              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
+              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
+              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
+              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
+              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
+              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
+              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
+              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
+              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
+              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
+              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
+              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
+              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
+              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
+              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
+              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
+              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
+              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
+  animation: starsUp 150s linear infinite;
+}
+
+.stars-06{
   content: "";
   position: absolute;
   width: 2px;
@@ -746,7 +790,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
               1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
               1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
               700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 150s linear infinite;
+  animation: starsUp 200s linear infinite;
 }
 
 @keyframes starsUp{
