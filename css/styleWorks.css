@@ -517,7 +517,6 @@
 }
 
 .stars-01{
-  background-size: cover;
   content: "";
   position: absolute;
   width: 10px;
@@ -551,7 +550,6 @@
 }
 
 .stars-02{
-  background-size: cover;
   content: "";
   position: absolute;
   width: 8px;
@@ -585,7 +583,6 @@
 }
 
 .stars-03{
-  background-size: cover;
   content: "";
   position: absolute;
   width: 8px;
@@ -619,7 +616,6 @@
 }
 
 .stars-04{
-  background-size: cover;
   content: "";
   position: absolute;
   width: 6px;
@@ -653,7 +649,6 @@
 }
 
 .stars-05{
-  background-size: cover;
   content: "";
   position: absolute;
   width: 4px;
