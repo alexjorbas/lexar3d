@@ -182,12 +182,16 @@ div.gallery img {
 }
 
 .original{
-  text-size: 20px;
   text-align: left;
   text-decoration: underline;
   color: black;
-  width: 5%;
   cursor: pointer;
+  font-size: 3em; 
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;  
 }
 
 
@@ -242,6 +246,12 @@ div.gallery img {
   width: 100%;
   height: auto;
 }
+
+
+
+
+
+
 
 
 
