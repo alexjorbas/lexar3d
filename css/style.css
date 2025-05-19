@@ -361,9 +361,9 @@
 /* Estilos del botón cuando se hace hover */
 .textoSolo button:hover {
   background-color: #000228;
-  background-image: linear-gradient(-45deg, #21D6DE , #8642C3 70%);
+  background-image: linear-gradient(-45deg, #55E34B, #21D6DE 15% , #8642C3 70%);
   border: 3px;
-  color: #FFF;
+  color: #000;
   letter-spacing: 5px;
 }
 
