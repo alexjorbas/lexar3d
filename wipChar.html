@@ -17,7 +17,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #0B0807;
+    background-color: #0A080A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@
     height: auto;
     max-width: 100%; /* Cambiado a % para adaptarse a la pantalla */
     max-height: 100%; /* Cambiado a % para adaptarse a la pantalla */
-    filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(330deg);
+    filter: grayscale(100%) brightness(60%) sepia(200%) hue-rotate(250deg);
    }
   
 
@@ -89,7 +89,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #8A0404;
+    background-color: #510b4b;
     z-index: 0;
     animation: load .5s forwards linear, glitch 2s infinite linear;
   }
@@ -97,7 +97,7 @@
   &:after {
     counter-reset: progress var(--p);
     content: counter(progress) '%';
-    color: #000;
+    color: #FFF;
     position: absolute;
     left: 5%;
     top: 50%;
@@ -161,7 +161,7 @@
   </a>
 </div>
 
-<div class="range" style="--p:5"></div>
+<div class="range" style="--p:80"></div>
 
 </body>
 </html>

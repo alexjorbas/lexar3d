@@ -302,9 +302,8 @@
   height: 100%;
 }
 
-.btn::before {
+.btn::before  {
   content: '';
-  color:#000;
   position: absolute;
   top: 0;
   left: 0;
@@ -312,8 +311,9 @@
   height: 100%;
   z-index: 16;
   transition: all 0.5s;
-  border: 3px solid rgba(0, 127 ,255, 0.4);
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border: 3px solid rgba(0, 127 ,255, 0.1);
+  border-radius: 60px; 
+  background: radial-gradient(circle, rgba(0, 127 ,255, 0.1) 50%, rgba(0, 127 ,255, 0.3) 100%);
 }
 
 .btn::after {
@@ -325,9 +325,10 @@
   height: 100%;
   z-index: -1;
   transition: all 0.5s;
-  border: 3px solid rgba(0, 127 ,255, 0.4);
+  border: 3px solid rgba(0, 127 ,255, 0.1);
+  background: radial-gradient(circle, rgba(0, 127 ,255, 0.1) 50%, rgba(0, 127 ,255, 0.3) 100%);
   background-color:#000;
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border-radius: 60px;  
 }
 
 .btn:hover::before {
