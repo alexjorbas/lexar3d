@@ -396,20 +396,22 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   margin-top: 50px;
 }
 
+
+
 .MainTitol button {
-  max-width: 570px;
-  width: 570px;
-  max-height: 120px;
-  height: 120px;
-  border-radius: 40px;
+  width: 400px;
+  height: 80px;
+  border-radius: 35px;
   font-size: 30px;
   font-family: 'Goldman', cursive;
   color: #FFF;
   background-color: rgba(20, 20, 20, 1);
   transition: all 0.5s;
+  margin: 5px 4px;
   letter-spacing: 1px;
-  position: relative;
+  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
   border: 3px solid rgba(255, 255, 255, 1);
+  z-index: 16;
 }
 
 .MainTitol button:hover {
@@ -419,6 +421,29 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   letter-spacing: 5px;
 }
 
+.Data button {
+  width: 280px;
+  height: 30px;
+  border-radius: 35px;
+  font-size: 20px;
+  font-family: 'Goldman', cursive;
+  color: #FFF;
+  background-color: rgba(20, 20, 20, 1);
+  transition: all 0.5s;
+  margin: 1px 4px;
+  letter-spacing: 1px;
+  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  border: 3px solid rgba(255, 255, 255, 1);
+  z-index: 16;
+  margin-bottom: 50px;
+}
+
+.Data button:hover {
+  background-color: rgba(199,42,32, 1);
+  border: 3px solid rgba(199,42,32, 1);
+  color: #000;
+  letter-spacing: 5px;
+}
 
 .videoGrp{
  display: flex;
@@ -428,7 +453,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
  height: 570px;
  width: 150%;
  position: relative;
- 
+ margin-top: 20px;
 }
 
 

@@ -14,24 +14,136 @@
 <title>TESTING</title>
 </head>
 <body>
+<div class="overlay"></div>
+    <canvas id="lightningCanvas"></canvas>
+<script>
+        const canvas = document.getElementById('lightningCanvas');
+        const ctx = canvas.getContext('2d');
 
-    <div id="containers">
-            <div class="inici" id="mdl_size">
-            
-            <div class="mdl_view">
+        let width, height;
+        let lightnings = [];
+
+        // Resize function to keep canvas filling the screen
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Helper: Random number between min and max
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // The Lightning Class
+        class Lightning {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.path = [];
+                this.energy = 0; // Length/Duration
+                this.opacity = 1;
+                this.speed = random(0.02, 0.05); // How fast it fades
+                this.createPath();
+            }
+
+            createPath() {
+                let currentX = this.x;
+                let currentY = this.y;
+                let segmentHeight = random(5, 15);
                 
-                <model-viewer src="models/UFO.glb" camera-controls disable-zoom id="view" camera-orbit="-365.2deg 85.27deg auto"></model-viewer>
+                this.path.push({x: currentX, y: currentY});
 
+                // Generate the jagged shape downward
+                while (currentY < height + 50) {
+                    // Move down
+                    currentY += segmentHeight;
+                    // Move randomly left or right (jagged effect)
+                    currentX += random(-30, 30); 
+                    
+                    // Add point to path
+                    this.path.push({x: currentX, y: currentY});
 
-            </div>
+                    // Randomly branch out (10% chance per segment)
+                    if (Math.random() < 0.1) {
+                         // We could add branching logic here for complex bolts
+                    }
+                }
+            }
 
+            draw() {
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(200, 230, 255, ${this.opacity})`;
+                ctx.lineWidth = 2;
+                
+                // Add a glow effect
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = `rgba(255, 255, 255, ${this.opacity})`;
 
+                if (this.path.length > 0) {
+                    ctx.moveTo(this.path[0].x, this.path[0].y);
+                    for (let i = 1; i < this.path.length; i++) {
+                        ctx.lineTo(this.path[i].x, this.path[i].y);
+                    }
+                }
+                ctx.stroke();
+                ctx.shadowBlur = 0; // Reset shadow for performance
+            }
 
-        </div>  
+            update() {
+                this.opacity -= this.speed;
+            }
+        }
 
-</div>
-   
+        // Flash Effect Class (Background flash when lightning hits)
+        let flashOpacity = 0;
+        function drawFlash() {
+            if (flashOpacity > 0) {
+                ctx.fillStyle = `rgba(255, 255, 255, ${flashOpacity})`;
+                ctx.fillRect(0, 0, width, height);
+                flashOpacity -= 0.05; // Fade out speed
+            }
+        }
 
+        // Main Animation Loop
+        function animate() {
+            // 1. Clear screen with a slight fade trail or full clear
+            ctx.clearRect(0, 0, width, height);
+
+            // 2. Randomly spawn a new lightning bolt
+            // Adjust the 0.98 value to make it more or less frequent (Higher = less frequent)
+            if (Math.random() > 0.98) {
+                const startX = random(0, width);
+                lightnings.push(new Lightning(startX, 0));
+                
+                // Randomly trigger a screen flash
+                if(Math.random() > 0.5) {
+                    flashOpacity = random(0.1, 0.3);
+                }
+            }
+
+            // 3. Draw Background Flash
+            drawFlash();
+
+            // 4. Update and Draw all lightnings
+            for (let i = lightnings.length - 1; i >= 0; i--) {
+                const l = lightnings[i];
+                l.draw();
+                l.update();
+
+                // Remove dead lightnings
+                if (l.opacity <= 0) {
+                    lightnings.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+    </script>
  
  
 </body>

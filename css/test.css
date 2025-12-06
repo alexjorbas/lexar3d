@@ -1,32 +1,28 @@
- body {
-      background-color: white;
-    }
+body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #050510; /* Deep dark blue/black */
+        }
 
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
 
-.visor{
-
-}
-
-
-#containers{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    gap: 50px;
-  
-}
-
-.mdl_view{
-    display: flex;
-    align-content: center;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-
-#mdl_size{
-    height: 250px;
-    width: 500px;
-}
-
+        /* Optional: Add a vignette effect on top of canvas for depth */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, #000000 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
