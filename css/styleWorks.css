@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   font-family: 'Open Sans Condensed', sans-serif;
   overflow: hidden;
+  overflow-y: scroll;
   align-items: center;
   margin: 0rem;
 }

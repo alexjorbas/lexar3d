@@ -220,6 +220,10 @@
   transform: scale(1.0) !important;
   }
 
+  .BGlightning{
+    max-width: 100% !important;
+  }
+
 
 }
 

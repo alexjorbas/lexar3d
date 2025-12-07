@@ -10,6 +10,7 @@
   align-items: center;
   margin: 0rem;
 }
+
 /*cursor*/
 .trail { 
     position: absolute;
@@ -349,8 +350,6 @@
       inset 0 0 20px rgba(0, 127, 255, 0.2), 
       0 0 20px rgba(0, 127, 255, 0.15);
 }
-
- 
 
 .MainTitol button:hover {
   background-color: #00022880;

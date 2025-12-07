@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  overflow-x: hidden;
+  font-family: 'Open Sans Condensed', sans-serif;
+  overflow: hidden;
   overflow-y: scroll;
   align-items: center;
+  margin: 0rem;
 }
 
 /*cursor*/
@@ -425,8 +427,6 @@ img {
   z-index: 2;
 }
 
-
-
 .player {
   top: 500px;
   background-color: #141414;
@@ -435,10 +435,23 @@ img {
   padding: 16px 10px;
   transition: all 0.5s;
   position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+      inset 0 0 20px rgba(255, 255, 255, 0.2), 
+      0 0 20px rgba(255, 255, 255, 0.15),       
+      0 4px 15px rgba(0, 0, 0, 0.2);           
+  zoom: reset;
+  background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .player:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: #FFF; 
 }
 
@@ -530,69 +543,82 @@ img {
   height: 80px;
   border-radius: 35px;
   font-size: 30px;
+  margin-top: 40px;
   font-family: 'Goldman', cursive;
   color: #FFF;
-  background-color: rgba(20,20,20,1);
   transition: all 0.5s;
-  margin: auto 4px;
   letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(0,0,0, 1);
+  position: relative;  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+      inset 0 0 20px rgba(255, 255, 255, 0.2), 
+      0 0 20px rgba(255, 255, 255, 0.15),       
+      0 4px 15px rgba(0, 0, 0, 0.2);           
+  zoom: reset;
+  background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .textoSolo button:hover {
-  background-color: #000228;
-  background-color: rgba(255,255,255, 1);
-  border: 3px solid rgba(255, 255 ,255, 1);
-  color: #000;
+  background-color: #00022880;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para Safari */
+  border: 1px solid rgba(0, 127, 255, 1);
+  color: #007FFF;  
   letter-spacing: 5px;
+  box-shadow: inset 0px 0px 20px rgba(0, 127, 255, 0.8),
+              0px 4px 10px rgba(0,0,0,0.2), 
+              0px 0px 20px rgba(0, 127, 255, 0.8);
+  text-shadow: 0px 0px 4px rgba(0, 127, 255, 1),
+               0px 0px 10px rgba(0, 127, 255, 0.6); 
 }
 
 .MainTitol button {
-  width: 400px;
+  width: 500px;
   height: 80px;
   border-radius: 35px;
+  margin: 8px 4px;
   font-size: 30px;
   font-family: 'Goldman', cursive;
-  color: #B2CFC5; 
-  background-color: rgba(60,64,91,1);
+  color: #007FFF;
+  background-color: #000228;
   transition: all 0.5s;
-  margin: 8px 4px;
   letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(0,0,0, 1);
+  position: relative;
   z-index: 16;
+  border: 1px solid rgba(0, 127, 255, 0.15);
+  box-shadow: 
+      inset 0 0 20px rgba(0, 127, 255, 0.2), 
+      0 0 20px rgba(0, 127, 255, 0.15);
 }
 
 .MainTitol button:hover {
-  background-color: #B2CFC5;
-  border: 3px solid rgba(126, 149 ,155, 1);
-  color:  rgba(60,64,91,1) ;
+  background-color: #00022880;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para Safari */
+  border: 1px solid rgba(0, 127, 255, 1);
+  color: #007FFF;  
   letter-spacing: 5px;
+  box-shadow: inset 0px 0px 20px rgba(0, 127, 255, 0.8),
+              0px 4px 10px rgba(0,0,0,0.2), 
+              0px 0px 20px rgba(0, 127, 255, 0.8);
+  text-shadow: 0px 0px 4px rgba(0, 127, 255, 1),
+               0px 0px 10px rgba(0, 127, 255, 0.6); 
 }
 
 .Data button {
   width: 280px;
   height: 30px;
-  border-radius: 35px;
-  font-size: 20px;
-  font-family: 'Goldman', cursive;
-  color: #3c405b;  
-  /*3c405b        B2CFC5 */
-  background-color: rgba(178,207,197,1);
-  transition: all 0.5s;
-  margin: 1px 4px;
-  letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(0,0,0, 1);
-  z-index: 16;
+  font-size: 20px; 
 }
 
 .Data button:hover {
-  background-color: #3c405b;
-  border: 3px solid rgba(60,64,91,1) ;
-  color:  rgba(178,207,197,1);
-  letter-spacing: 5px;
+  background-color: #00022880;
 }
 
 .nearImage {
@@ -668,4 +694,77 @@ img {
 .fullcover {
   position: relative;
 }
+
+.difuminado {
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -99; 
+  backdrop-filter: blur(5px);
+}
+
+
+/*lightning*/
+.BGlightning{
+  filter: blur(5px);
+  position:fixed;
+  background-size: cover;
+  background-position: left;  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+canvas3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 102; 
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
+
+
+/*blur sphere background*/
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, darkblue);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index: -101;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -101;
+  backdrop-filter: blur(12vmax);
 }
