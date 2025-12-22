@@ -11,14 +11,6 @@
   margin: 0rem;
 }
 
-/*cursor*/
-.trail { 
-    position: absolute;
-    height: 12px; width: 12px;
-    border-radius: 6px;
-    background: linear-gradient(to right, #004890,#00CDFF);
-}
-
 /*Loading*/
 #loading {
   position: fixed;
@@ -184,10 +176,6 @@
 
   .buttonBack, .buttonBack2{
     left: 5% !important;
-  }
-
-  .trail { 
-    background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
   }
 
   .btn:hover::before {

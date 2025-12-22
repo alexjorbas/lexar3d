@@ -11,14 +11,6 @@
   margin: 0rem;
 }
 
-/*cursor*/
-.trail { 
-    position: absolute;
-    height: 12px; width: 12px;
-    border-radius: 6px;
-    background: linear-gradient(to right, #004890,#00CDFF);
-  }
-
 /*Loading*/
 #loading {
   position: fixed;
@@ -167,9 +159,7 @@
   margin-top: 700px !important;
   }
 
-  .trail { 
-    background: linear-gradient(to right, rgba(0, 72, 144, 0), rgba(0, 205, 255, 0));
-  }
+ 
 
   .btn:hover::before {
   transform: rotate(0deg) !important;
@@ -227,7 +217,7 @@
 
 .imatge:hover {
   transform: scale(1.05);
-  background-image: radial-gradient(circle at center, rgba(186, 5, 54, 0.8), rgba(0, 0, 0, 0) 60%);
+  background-image: radial-gradient(circle at center, rgba(0, 127, 255, 0.8), rgba(0, 0, 0, 0) 60%);
 }
 
 
