@@ -28,8 +28,8 @@
 
 #loading-image {
   position: absolute;
-  width: 100px; 
-  height: 100px; 
+  width: 150px; 
+  height: 150px; 
   z-index: 102; 
   animation: loader 1s linear infinite;
   transform-origin: center center; 
@@ -41,25 +41,6 @@
   }
   to {
     transform: rotate(360deg); /* Rotación completa */
-  }
-}
-
-
-#loading-image2 {
-  position: absolute;
-  width: 250px; 
-  height: 250px; 
-  z-index: 102; 
-  animation: loader2 1.5s linear infinite;
-  transform-origin: center center; 
-}
-
-@keyframes loader2 {
-  from {
-    transform: rotate(360deg); /* Rotación inicial */
-  }
-  to {
-    transform: rotate(0deg); /* Rotación completa */
   }
 }
 
@@ -166,13 +147,7 @@
     max-height: 50px; 
     z-index: 10000; 
   }
-   #loading-image2 {
-    max-width: 150px; 
-    max-height: 150px; 
-    position: absolute;
-    z-index: 10000; 
-  }
-
+  
   .btn:hover::before {
   transform: rotate(0deg) !important;
   }
