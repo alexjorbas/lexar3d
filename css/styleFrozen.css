@@ -1,11 +1,12 @@
   body{
-  background-color: #EFEFEF;
+  background-color:black;
   width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   font-family: 'Open Sans Condensed', sans-serif;
   overflow: hidden;
+  overflow-y: scroll;
   align-items: center;
   margin: 0rem;
 }
@@ -57,7 +58,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 /* Firefox */
 /* Modificar el scrollbar en Firefox */
 * {
-  scrollbar-color: #333 #f5f5f5; /* Color del scrollbar */
+  scrollbar-color: #060325 #015EBC;
 }
 
 /* Estilo de la barra de desplazamiento horizontal en WebKit */
@@ -226,16 +227,14 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   max-width: 20%;
   height: auto;
   margin: auto; 
-  background-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 55%);
   transition: all 0.5s; 
   z-index: 2;
 }
 
 .imatge:hover {
   transform: scale(1.05);
-  background-image: radial-gradient(circle at center, rgba(192, 42, 32, 1), rgba(0, 0, 0, 0) 55%);
+  background-image: radial-gradient(circle at center, rgba(0, 127, 255, 0.8), rgba(0, 0, 0, 0) 60%);
 }
-
 
 
 /*BUTTONS*/
@@ -259,7 +258,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 .btn:hover {
-  color: #000; /* Cambiamos el color del texto a blanco al pasar el cursor sobre el botón */
+  color: #007FFF;
 }
 
 .btn-izquierda {
@@ -278,7 +277,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   height: 100%;
 }
 
-.btn::before {
+.btn::before  {
   content: '';
   position: absolute;
   top: 0;
@@ -287,8 +286,9 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   height: 100%;
   z-index: 16;
   transition: all 0.5s;
-  border: 3px solid rgba(0,0,0, 0.4);
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border: 3px solid rgba(0, 127 ,255, 0.1);
+  border-radius: 60px; 
+  background: radial-gradient(circle, rgba(0, 127 ,255, 0.1) 50%, rgba(0, 127 ,255, 0.3) 100%);
 }
 
 .btn::after {
@@ -300,9 +300,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   height: 100%;
   z-index: -1;
   transition: all 0.5s;
-  border: 3px solid rgba(0,0,0, 0.4);
+  border: 3px solid rgba(0, 127 ,255, 0.1);
+  background: radial-gradient(circle, rgba(0, 127 ,255, 0.1) 50%, rgba(0, 127 ,255, 0.3) 100%);
   background-color:#000;
-  border-radius: 60px; /* Agregamos la propiedad para hacer los bordes redondos */
+  border-radius: 60px;  
 }
 
 .btn:hover::before {
@@ -324,7 +325,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 /*boto back*/
 .buttonBack{
   display: flex;
-  left: 5%;
+  left: 10%;
   position: absolute;
   position: fixed;
   transition: all 0.5s;
@@ -339,7 +340,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 
 .buttonBack2{
   display: flex;
-  left: 5%;
+  left: 10%;
   margin-top: 4em;
   position: absolute;
   position: fixed;
@@ -354,62 +355,88 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 }
 
 /*CONTENIDO PAG*/
-
-.MainTitol {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  z-index: 18;
-  margin-top: 50px;
-}
-
-
-
-.MainTitol button {
-  width: 400px;
+.textoSolo button {
+  width: 480px;
   height: 80px;
   border-radius: 35px;
   font-size: 30px;
+  margin-top: 40px;
   font-family: 'Goldman', cursive;
   color: #FFF;
-  background-color: rgba(20, 20, 20, 1);
   transition: all 0.5s;
-  margin: 5px 4px;
   letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(255, 255, 255, 1);
+  position: relative; 
+  z-index: 20; 
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+      inset 0 0 20px rgba(255, 255, 255, 0.2), 
+      0 0 20px rgba(255, 255, 255, 0.15),       
+      0 4px 15px rgba(0, 0, 0, 0.2);           
+  zoom: reset;
+  background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1), 
+        rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.textoSolo button:hover {
+  background-color: #00022880;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para Safari */
+  border: 1px solid rgba(0, 127, 255, 1);
+  color: #007FFF;  
+  letter-spacing: 5px;
+  box-shadow: inset 0px 0px 20px rgba(0, 127, 255, 0.8),
+              0px 4px 10px rgba(0,0,0,0.2), 
+              0px 0px 20px rgba(0, 127, 255, 0.8);
+  text-shadow: 0px 0px 4px rgba(0, 127, 255, 1),
+               0px 0px 10px rgba(0, 127, 255, 0.6); 
+}
+
+.MainTitol button {
+  width: 500px;
+  height: 80px;
+  border-radius: 35px;
+  margin: 8px 4px;
+  font-size: 30px;
+  font-family: 'Goldman', cursive;
+  color: #007FFF;
+  background-color: #000228;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+  position: relative;
   z-index: 16;
+  border: 1px solid rgba(0, 127, 255, 0.15);
+  box-shadow: 
+      inset 0 0 20px rgba(0, 127, 255, 0.2), 
+      0 0 20px rgba(0, 127, 255, 0.15);
 }
 
 .MainTitol button:hover {
-  background-color: rgba(199,42,32, 1);
-  border: 3px solid rgba(199,42,32, 1);
-  color: #000;
+  background-color: #00022880;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Para Safari */
+  border: 1px solid rgba(0, 127, 255, 1);
+  color: #007FFF;  
   letter-spacing: 5px;
+  box-shadow: inset 0px 0px 20px rgba(0, 127, 255, 0.8),
+              0px 4px 10px rgba(0,0,0,0.2), 
+              0px 0px 20px rgba(0, 127, 255, 0.8);
+  text-shadow: 0px 0px 4px rgba(0, 127, 255, 1),
+               0px 0px 10px rgba(0, 127, 255, 0.6); 
 }
 
 .Data button {
   width: 280px;
   height: 30px;
-  border-radius: 35px;
-  font-size: 20px;
-  font-family: 'Goldman', cursive;
-  color: #FFF;
-  background-color: rgba(20, 20, 20, 1);
-  transition: all 0.5s;
-  margin: 1px 4px;
-  letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(255, 255, 255, 1);
-  z-index: 16;
-  margin-bottom: 50px;
+  font-size: 20px; 
 }
 
 .Data button:hover {
-  background-color: rgba(199,42,32, 1);
-  border: 3px solid rgba(199,42,32, 1);
-  color: #000;
-  letter-spacing: 5px;
+  background-color: #00022880;
 }
 
 .videoGrp{
@@ -440,31 +467,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   flex-direction: column;
   align-items: center;
   margin-top: 450px;
-}
-
-.textoSolo button {
-  max-width: 570px;
-  width: 570px;
-  max-height: 120px;
-  height: 120px;
-  border-radius: 40px;
-  font-size: 30px;
-  font-family: 'Goldman', cursive;
-  color: #FFF;
-  background-color: rgba(20,20,20,1);
-  transition: all 0.5s;
-  letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
-  border: 3px solid rgba(255, 255, 255, 1);
-  zoom: reset;
-}
-
-
-.textoSolo button:hover {
-  background-color: rgba(73,8,4, 1);
-  border: 3px solid rgba(73,8,4, 1);
-  color: #FF291C;
-  letter-spacing: 5px;
 }
 
 .nearImage {
@@ -568,17 +570,16 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: -99; 
   backdrop-filter: blur(5px);
 }
 
 
-/*estrelles*/
-.fons{
-  align-items: center;
+/*lightning*/
+.BGlightning{
+  filter: blur(5px);
   position:fixed;
-  z-index: -100;
   background-size: cover;
   background-position: left;  
   top: 0;
@@ -587,178 +588,52 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
   bottom: 0;
 }
 
-.stars-01{
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
-              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
-              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
-              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
-              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
-              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
-              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
-              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
-              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
-              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
-              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
-              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
-              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
-              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
-              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
-              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
-              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
-              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
-              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
-              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
-              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
-              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
-              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
-              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
-              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 10s linear infinite;
-}
-
-.stars-02{
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
-              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
-              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
-              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
-              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
-              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
-              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
-              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
-              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
-              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
-              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
-              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
-              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
-              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
-              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
-              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
-              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
-              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
-              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
-              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
-              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
-              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
-              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
-              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
-              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 30s linear infinite;
-}
-
-.stars-03{
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
-              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
-              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
-              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
-              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
-              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
-              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
-              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
-              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
-              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
-              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
-              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
-              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
-              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
-              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
-              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
-              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
-              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
-              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
-              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
-              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
-              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
-              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
-              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
-              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 50s linear infinite;
-}
-
-.stars-04{
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
-              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
-              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
-              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
-              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
-              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
-              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
-              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
-              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
-              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
-              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
-              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
-              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
-              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
-              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
-              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
-              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
-              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
-              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
-              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
-              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
-              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
-              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
-              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
-              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 100s linear infinite;
-}
-
-.stars-05{
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  box-shadow: 100px 200px #555555, 200px 250px #555555, 200px 500px #555555, 300px 300px #555555,
-              550px 150px #555555, 550px 300px #555555, 350px 500px #555555, 1750px 150px #555555,
-              1000px 400px #555555, 650px 450px #555555, 1200px 50px #555555, 1100px 450px #555555,
-              950px 50px #555555, 1100px 500px #555555, 850px 400px #555555, 850px 300px #555555,
-              1200px 100px #555555, 900px 300px #555555, 1150px 400px #555555, 1650px 900px #555555,
-              650px 600px #555555, 350px 600px #555555, 600px 650px #555555, 150px 750px #555555,
-              1750px 450px #555555, 250px 800px #555555, 1800px 1150px #555555, 450px 1450px #555555,
-              1150px 800px #555555, 100px 700px #555555, 350px 650px #555555, 250px 600px #555555,
-              1850px 700px #555555, 1650px 600px #555555, 450px 1050px #555555, 1550px 500px #555555,
-              150px 1400px #555555, 800px 800px #555555, 1250px 1950px #555555, 100px 1700px #555555,
-              1150px 1350px #555555, 1700px 50px #555555, 1750px 500px #555555, 300px 1100px #555555,
-              350px 1650px #555555, 1700px 1200px #555555, 450px 800px #555555, 2000px 500px #555555,
-              350px 1600px #555555, 1350px 1350px #555555, 1100px 1750px #555555, 150px 950px #555555,
-              1600px 1700px #555555, 400px 1000px #555555, 650px 1050px #555555, 2000px 1650px #555555,
-              1100px 700px #555555, 1350px 600px #555555, 600px 1900px #555555, 1500px 600px #555555,
-              20px 1350px #555555, 850px 1800px #555555, 450px 1150px #555555, 50px 700px #555555,
-              100px 1400px #555555, 1000px 1700px #555555, 250px 600px #555555, 1200px 850px #555555,
-              1750px 20px #555555, 100px 1550px #555555, 1200px 1650px #555555, 1500px 700px #555555,
-              1800px 600px #555555, 650px 800px #555555, 700px 600px #555555, 1100px 1350px #555555,
-              900px 550px #555555, 1600px 800px #555555, 1000px 1100px #555555, 1650px 1350px #555555,
-              750px 1050px #555555, 1750px 800px #555555, 600px 1650px #555555, 150px 1550px #555555,
-              250px 1800px #555555, 1100px 1700px #555555, 800px 1500px #555555, 1100px 1200px #555555,
-              1450px 1600px #555555, 150px 1400px #555555, 1200px 1450px #555555, 1800px 1050px #555555,
-              1250px 1300px #555555, 1000px 1000px #555555, 300px 700px #555555, 100px 1250px #555555,
-              700px 1750px #555555, 1950px 250px #555555, 1550px 700px #555555;
-  animation: starsUp 150s linear infinite;
-}
+canvas3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 102; 
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
 
 
-@keyframes starsUp{
-  0%{
-    transform: translateY(500px);
+/*blur sphere background*/
+@keyframes rotate {
+  from {
+    rotate: 0deg;
   }
-  100%{
-    transform: translateY(-2000px);
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
   }
 }
 
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, darkblue);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+  z-index: -101;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -101;
+  backdrop-filter: blur(12vmax);
+}

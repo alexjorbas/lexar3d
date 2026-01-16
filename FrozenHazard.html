@@ -27,20 +27,20 @@
 
 <a href="CharWorks.html">
   <div class="buttonBack">
-    <button style="color: #000; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #2d2d2d; border: none" >&#10531;</button>
+    <button style="color: #007FFF; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #9ACCFF; border: none " >&#10531;</button>
   </div>
 </a>
 
 <a href="#up">
   <div class="buttonBack2">
-    <button id="scrollButton" style="color: #000; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #2d2d2d; border: none " >&#x21a5;</button>
+    <button id="scrollButton" style="color: #007FFF; cursor: pointer; border-radius: 100%; background-color:rgba(0,0,0,0); text-shadow: 0 0 10px #9ACCFF; border: none " >&#x21a5;</button>
   </div>
 </a>
 
 <div class="MainTitol">
   <button>FROZEN HAZARD</button>
 </div>
-<div class="Data">
+<div class="Data MainTitol">
     <button>Posted 26-09-25</button>
 </div>
 
@@ -169,14 +169,150 @@
   <div class="difuminado"></div>
 </div>
 
-<div class="fons">
-  <div class="stars-01"></div>
-  <div class="stars-02"></div>
-  <div class="stars-03"></div>
-  <div class="stars-04"></div>
-  <div class="stars-05"></div>
-  <div class="stars-06"></div>
+<div class="BGlightning">
+      <canvas id="canvas3"></canvas>
 </div>
+
+<div id="blob"></div>
+<div id="blur"></div>
+
+<script>
+    /* -- BLOB SPHERE -- */
+
+const blob = document.getElementById("blob");
+
+window.onpointermove = event => { 
+  const { clientX, clientY } = event;
+  
+  blob.animate({
+    left: `${clientX}px`,
+    top: `${clientY}px`
+  }, { duration: 3000, fill: "forwards" });
+}
+</script>
+
+<script>
+      /* -- lightning -- */
+    var canvas3 = document.getElementById('canvas3');
+    var ctx3 = canvas3.getContext('2d');
+
+    var lightning = [];
+    var lightTimeCurrent = 0;
+    var lightTimeTotal = 0;
+
+    var w = canvas3.width = window.innerWidth;
+    var h = canvas3.height = window.innerHeight;
+
+    // Resize handling
+    window.addEventListener('resize', function() {
+        w = canvas3.width = window.innerWidth;
+        h = canvas3.height = window.innerHeight;
+    });
+
+    function random(min, max) {
+        return Math.random() * (max - min + 1) + min;
+    }
+
+    // This creates the fading trail effect
+    function clearCanvas3() {
+        ctx3.globalCompositeOperation = 'destination-out';
+        ctx3.fillStyle = 'rgba(0,0,0,' + random(1, 30) / 100 + ')';
+        ctx3.fillRect(0, 0, w, h);
+        ctx3.globalCompositeOperation = 'source-over';
+    }
+
+    function createLightning() {
+        var x = random(100, w - 100);
+        var y = random(0, h / 4);
+
+        var createCount = random(1, 3);
+        for (var i = 0; i < createCount; i++) {
+            var single = {
+                x: x,
+                y: y,
+                xRange: random(5, 60),
+                yRange: random(10, 25),
+                path: [{
+                    x: x,
+                    y: y
+                }],
+                pathLimit: random(40, 55),
+                timer: 0,
+                speed: 5 
+            };
+            lightning.push(single);
+        }
+    }
+
+    function drawLightning() {
+        for (var i = 0; i < lightning.length; i++) {
+            var light = lightning[i];
+
+              light.timer++;
+            
+            if (light.timer >= light.speed) {
+                // Add new points to the lightning path
+                light.path.push({
+                    x: light.path[light.path.length - 1].x + (random(0, light.xRange) - (light.xRange / 2)),
+                    y: light.path[light.path.length - 1].y + (random(0, light.yRange))
+                });
+                // Reiniciamos el timer
+                light.timer = 0;
+            }
+
+            // If path is too long, remove the lightning bolt
+            if (light.path.length > light.pathLimit) {
+                lightning.splice(i, 1);
+            }
+
+            // Draw styling
+            ctx3.strokeStyle = 'rgba(1, 60, 198, .1)';
+            ctx3.lineWidth = 6;
+            if (random(0, 15) === 0) {
+                ctx3.lineWidth = 100;
+            }
+            if (random(0, 30) === 0) {
+                ctx3.lineWidth = 90;
+            }
+
+            // Draw the path
+            ctx3.beginPath();
+            ctx3.moveTo(light.x, light.y);
+            for (var pc = 0; pc < light.path.length; pc++) {
+                ctx3.lineTo(light.path[pc].x, light.path[pc].y);
+            }
+            
+            // Occasional screen flash (White flash)
+            
+            
+            ctx3.lineJoin = 'miter';
+            ctx3.stroke();
+        }
+    }
+
+    function animateLightning() {
+        clearCanvas3();
+        lightTimeCurrent++;
+        
+        // Control frequency of lightning strikes
+        if (lightTimeCurrent >= lightTimeTotal) {
+            createLightning();
+            lightTimeCurrent = 0;
+            lightTimeTotal = 350; // Adjust this number (lower = more frequent)
+        }
+        drawLightning();
+    }
+
+    function animloop() {
+        animateLightning();
+        requestAnimationFrame(animloop);
+    }
+
+    // Start
+    animloop();
+
+</script>
+
 <script>
     $(window).on('load', function() {
       $('#loading').fadeOut('slow'); 
@@ -212,63 +348,6 @@
   }
 </script>
 
-<script>
-    //trail cursor
-    var dots = [],
-        mouse = {
-          x: 0,
-          y: 0
-        };
-
-    var Dot = function() {
-      this.x = 0;
-      this.y = 0;
-      this.node = (function(){
-        var n = document.createElement("div");
-        n.className = "trail";
-        document.body.appendChild(n);
-        return n;
-      }());
-    };
-
-    Dot.prototype.draw = function() {
-      this.node.style.left = this.x + "px";
-      this.node.style.top = this.y + "px";
-    };
-
-    for (var i = 0; i < 12; i++) {
-      var d = new Dot();
-      dots.push(d);
-    }
-
-    function draw() {
-      var x = mouse.x,
-          y = mouse.y;
-      
-      dots.forEach(function(dot, index, dots) {
-        var nextDot = dots[index + 1] || dots[0];
-        
-        dot.x = x;
-        dot.y = y;
-        dot.draw();
-        x += (nextDot.x - dot.x) * .6;
-        y += (nextDot.y - dot.y) * .6;
-
-      });
-    }
-
-    addEventListener("mousemove", function(event) {
-      mouse.x = event.pageX;
-      mouse.y = event.pageY;
-    });
-
-    function animate() {
-      draw();
-      requestAnimationFrame(animate);
-    }
-
-    animate(); 
-    </script>
 
 </body>
 </html>
