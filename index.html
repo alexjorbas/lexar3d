@@ -4,8 +4,7 @@
 <meta name="viewport" content="width-device-widtj, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -27,22 +26,38 @@
 
 <div class="Gtext">
   <div class="textoSolo">
-    <a href="mainWorks.html"><button style="cursor: pointer;">LASTEST PROJECTS</button></a>
+    <a href="mainWorks.html"><button id="lastestButton" style="cursor: pointer;">LASTEST PROJECTS</button></a>
   </div>
    <div class="textoSolo textoSolo2">
     <button id="upcomingButton">UPCOMING PROJECT</button>
   </div>
 </div>
-
-
+ 
+ 
 <div class="containerSlider">
   <div class="circuloUFOContainer">
-    <img src="imgs/welcometext.gif" class="imagenIzquierda">
-    <div class="circuloUFO">
-      <img src="imgs/index_upcoming3.png" class="circuloUFOImage">
+   <div class="TEXTmorph">
+     <span>I'm Alex, a 3D artist specializing in hard surfaces</span>
+     <span >focused on creating highly realistic 3D vehicles</span>     
+    </div>
+    <div class="circuloRIGHT">
+      <img src="imgs/index_upcoming4.png" class="circuloRIGHTImage">
     </div>
   </div>
 </div>
+
+<svg style="display:none;">
+  <defs>
+    <filter id="threshold">
+      <feColorMatrix in="SourceGraphic"
+        type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 255 -140" />
+    </filter>
+  </defs>
+</svg>
 
 <div class="fullcover">    
   <div class="difuminado"></div>
@@ -195,10 +210,11 @@ window.onpointermove = event => {
 
 
 <script>
+    // blur esfera right
     document.addEventListener('DOMContentLoaded', () => {
       const upcomingButton = document.getElementById('upcomingButton');
-      const circuloUFOImage = document.querySelector('.circuloUFOImage');
-      const circuloUFO = document.querySelector('.circuloUFO');
+      const circuloUFOImage = document.querySelector('.circuloRIGHTImage');
+      const circuloUFO = document.querySelector('.circuloRIGHT');
 
       upcomingButton.addEventListener('mouseover', () => {
         circuloUFOImage.style.filter = 'none';
@@ -213,11 +229,37 @@ window.onpointermove = event => {
       });
 
       upcomingButton.addEventListener('mouseout', () => {
-        circuloUFO.style.borderRadius = '30% 100% 30% 100%';
+        circuloUFO.style.borderRadius = '100% 100% 100% 100%';
       });
     });
 </script>
 
+<script>
+    // texto Izquierda
+  document.addEventListener('DOMContentLoaded', () => {
+  const upcomingButton = document.getElementById('lastestButton');
+  // Seleccionamos TODOS los span para que el efecto se aplique a ambos textos del morphing
+  const morphSpans = document.querySelectorAll('.TEXTmorph span');
+
+  if (upcomingButton) {
+    // Al entrar con el cursor
+    upcomingButton.addEventListener('mouseover', () => {
+      morphSpans.forEach(span => {
+        span.classList.add('active-gradient');
+      });
+    });
+
+    // Al salir con el cursor
+    upcomingButton.addEventListener('mouseout', () => {
+      morphSpans.forEach(span => {
+        span.classList.remove('active-gradient');
+      });
+    });
+  }
+});
+</script>
+
+ 
 
 <script>
     $(window).on('load', function() {

@@ -141,22 +141,11 @@
   #upcomingButton{
     font-size: 15px;
   }
-
-
-  .imagenIzquierda {
-    width: 90%; 
-    max-width: 300px; 
-    margin-bottom: 20px; 
-    z-index: 16;
+  
+  .circuloUFOContainer{
+    max-width: 20% !important;     
   }
 
-  .circuloUFO{
-    width: 60%; 
-    margin: 20px auto; 
-    z-index: 16;
-    scale: 300%;
-    margin-top: 80px !important;
-  }
 
    #loading {
     background-color: #111111; 
@@ -326,7 +315,7 @@
   transition: all 0.8s;
   margin: auto 4px;
   letter-spacing: 1px;
-  position: relative; /* Agregada posición relativa para elementos ::before y ::after */
+  position: relative; 
   border: 3px solid rgba(5,5,5, 0);
 }
 
@@ -358,11 +347,7 @@
   );
 }
 
-/* Aplicar filtro de desenfoque a la imagen */
-.circuloUFOImage {
-  filter: blur(20px);  
-  transition: filter 0.3s ease; 
-}
+
 
 
 /*Slider semicirculo*/
@@ -373,20 +358,23 @@
 
 .circuloUFOContainer {
   display: flex;
-  justify-content: flex-end; /* Desplaza los elementos a la derecha */
   align-items: center;
+  max-width: 1166px;
+  max-height: 500px;
 }
 
-.imagenIzquierda {
-  width: 50%; /* Ajusta el tamaño de la imagen a la izquierda */
+/* Aplicar filtro de desenfoque a la imagen */
+.circuloRIGHTImage {
+  filter: blur(20px);  
+  transition: filter 0.3s ease; 
 }
 
-.circuloUFO {
+.circuloRIGHT {
   display: block;
-  width: 20%;
-  margin:  40px auto;  
-  border-radius: 30% 100% 30% 100%;
-  border: 2px solid rgba(50, 50, 50, 1);
+  width: 35%;
+  margin:auto auto ;  
+  border-radius: 100% 100% 100% 100%;
+  border: 1px solid rgba( 0, 255,  0, 0.2);
   overflow: hidden;
   position: relative;
   transition: all 0.5s;
@@ -396,30 +384,65 @@
 }
 
 
-.circuloUFO img {
+.circuloRIGHT img {
   display: block;
   width: 100%;
   height: auto;
   filter: blur(20px);
 }
 
-
-/*background stars*/
-.fullcover {
+.TEXTmorph {
+  filter: url(#threshold);  
   position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* Ajusta el tamaño según tu diseño */
+  width: 600px;
+  height: 410px;
+  margin-top: 200px;
+}
+ 
+.TEXTmorph span {
+  position: absolute;
+  font-family: 'Goldman', cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 2px;
+  animation: morphingAnim 12s infinite ease-in-out;
+
+  
+  background: linear-gradient(-45deg, #55E34B, #21D6DE 40%, #8642C3 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: white; 
+  transition: -webkit-text-fill-color 0.6s ease, filter 0.4s ease;
 }
 
-.difuminado {
-  position: fixed;  
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: -99; 
-  backdrop-filter: blur(5px);
+.TEXTmorph span.active-gradient {
+  /* Esto revela el gradiente que ya estaba debajo */
+  -webkit-text-fill-color: transparent;
 }
 
+.TEXTmorph span:nth-child(2) {
+  animation-delay: -6s;
+}
+
+@keyframes morphingAnim {
+  0%, 15% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  40%, 60% {
+    filter: blur(15px);
+    opacity: 0;
+  }
+  85%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 /*background stars*/
 .fullcover {
