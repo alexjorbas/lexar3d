@@ -88,8 +88,13 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
     justify-content: center;
     align-content: space-between;
     flex-direction: column; /* Agregar esta línea */
-    width: 95%;
     align-items: center;
+    width: 100%;  
+  }
+
+   #blur  {
+    height: 120% !important;
+    width: 120% !important;
   }
 
   .containerbtn {
@@ -106,10 +111,10 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
     margin: 20px 0;
   }
   
-  .btn {
+   .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
-    margin: 0 20% !important;
+    margin: 10px 20% !important;
   }
 
 
@@ -202,6 +207,17 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,129,129,1) 25%, rgb
 
   .btn:hover {
   transform: scale(1.0) !important;
+  }
+  
+  .MainTitol button{
+    width: 380px !important;
+    height: 90px !important;
+  }
+
+  .Data button{
+    width: 190px !important;
+    height: 45px !important;
+    font-size: 15px !important;
   }
 
 }

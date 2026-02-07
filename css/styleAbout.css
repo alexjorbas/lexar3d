@@ -92,7 +92,12 @@
     justify-content: center;
     align-content: space-between;
     flex-direction: column; /* Agregar esta línea */
-    width: 95%;
+     width: 100%;  
+  }
+
+   #blur  {
+    height: 120% !important;
+    width: 120% !important;
   }
 
   .containerbtn {
@@ -103,17 +108,17 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   .imatge {
     max-width: 100%;
     margin: 20px 0;
   }
   
-  .btn {
+   .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
-    margin: 0 20% !important;
-  }
+    margin: 10px 20% !important;
+    }
 
    #loading {
     background-color: #111111; 
@@ -158,8 +163,6 @@
   .range{
     height: 20px !important;
   }
-
-
 
 }
 
@@ -479,9 +482,15 @@ canvas3{
 }
 
 #blur {
-  height: 100%;
-  width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;  
+  height: 100vh;
   z-index: -101;
   backdrop-filter: blur(12vmax);
+  -webkit-backdrop-filter: blur(12vmax); /* Necesario para Safari/iOS */
+  pointer-events: none;
 }

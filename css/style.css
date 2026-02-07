@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   font-family: 'Open Sans Condensed', sans-serif;
   overflow: hidden;
+  overflow-y: scroll;
   align-items: center;
   margin: 0rem;
 }
@@ -81,10 +82,6 @@
     flex-direction: column; 
     align-items: center; 
   }
-
-  .circuloUFO{
-    scale: 150%;
-  }
   
   .textoSolo button {
     width: 80% !important; 
@@ -97,7 +94,12 @@
  body {
     overflow-x: hidden;
     overflow-y: auto;
-    width: 95%;
+    width: 100%;  
+  }
+
+   #blur  {
+    height: 120% !important;
+    width: 120% !important;
   }
 
   .containerbtn {
@@ -108,7 +110,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   
   .imatge {
     max-width: 100%;
@@ -118,34 +119,34 @@
    .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
-    margin: 0 20% !important;
-    }
+    margin: 10px 20% !important;
+  }
  
 
   .Gtext {
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    margin-top: 2vh;
   }
 
   
-  .textoSolo button {
-    width: 90%; 
-    max-width: 350px; 
-    max-height: 50px;
-    margin: 4px auto; 
+  .textoSolo {
+    width: 100%; 
+    margin-height: 100px;
+    margin-left: 20%;
     font-size:15px !important;
   }
-
-  #upcomingButton{
-    font-size: 15px;
-  }
+ 
   
-  .circuloUFOContainer{
-    max-width: 20% !important;     
+  .containerSlider{
+    width: 100%;   
   }
 
+  .TEXTmorph{
+    scale: 50%;
+    margin-top: -10px !important;
+    height: 150px !important;
+  }
 
    #loading {
     background-color: #111111; 
@@ -171,10 +172,9 @@
   transform: scale(1.0) !important;
   }
 
-  .BGlightning{
-    max-width: 100% !important;
+  .circuloRIGHT{
+    margin-bottom: 30px !important;
   }
-
 
 }
 

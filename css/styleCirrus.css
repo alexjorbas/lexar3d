@@ -90,8 +90,12 @@
  body {
     overflow-x: hidden;
     overflow-y: auto;
-    width: 95%;
+    width: 100%;  
+  }
 
+   #blur  {
+    height: 120% !important;
+    width: 120% !important;
   }
 
   .containerbtn {
@@ -101,7 +105,6 @@
     gap: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
-  
   }
   
   .imatge {
@@ -109,10 +112,10 @@
     margin: 20px 0;
   }
   
-  .btn {
+   .btn {
     font-size: 25px !important;
     padding: 8px 16px !important;
-    margin: 0 20% !important;
+    margin: 10px 20% !important;
   }
 
   .container {
